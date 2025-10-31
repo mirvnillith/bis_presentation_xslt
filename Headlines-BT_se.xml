@@ -442,7 +442,7 @@
 	</BusinessTerm>
 	<BusinessTerm id="BT-128-1">
 		<TermName>Objektreferenstyp</TermName>
-		<DisplayName>Typ</DisplayName>
+		<DisplayName>Faktureringsobjekt</DisplayName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-129">
 		<TermName>Fakturerad kvantitet</TermName>
@@ -517,10 +517,10 @@
 		<TermName>Bruttopris</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-149">
-		<TermName>Baskvantitet</TermName>
+		<TermName>Basantal för artikelpris</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-150">
-		<TermName>Baskvantitet kod</TermName>
+		<TermName>Basantal kod</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BG-30">
 		<TermName>FAKTURARAD SKATTEINFORMATION</TermName>
@@ -541,13 +541,13 @@
 		<TermName>Beskrivning</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-155">
-		<TermName>Säljarens artikelnr</TermName>
+		<TermName>Leverantörens artikelnummer</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-156">
 		<TermName>Köparens artikelnr</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-157">
-		<TermName>Standard artikelnr</TermName>
+		<TermName>GTIN artikelnummer</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-157-1">
 		<TermName>Typ</TermName>
@@ -659,7 +659,7 @@
 		<TermName>URI för externa dokument</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-019">
-		<TermName>Kontraktsreferens</TermName>
+		<TermName>Avtalsnummer</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-021">
 		<TermName>Köparens elektroniska adress</TermName>
@@ -696,6 +696,9 @@
 	</BusinessTerm>
 	<BusinessTerm id="tir01-p004">
 		<TermName/>
+	</BusinessTerm>
+	<BusinessTerm id="tir01-p45">
+		<TermName>Prislista</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-044">
 		<TermName>Köparens juridiska registreringsnamn</TermName>
@@ -894,7 +897,7 @@
 		<TermName>Leveransparti</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-101">
-		<TermName>Leveransparti identifierare</TermName>
+		<TermName>Leveranspartiidentifierare</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-102">
 		<TermName>Leveransparti namn</TermName>
@@ -933,7 +936,7 @@
 		<TermName>Kontaktpersonens e-postadress</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-p036">
-		<TermName>Paketerikett</TermName>
+		<TermName>Paketetikett</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="Order_TermsOfDelivery">
 		<TermName>Leveransvillkor</TermName>
@@ -1279,13 +1282,13 @@
     <TermName>Katalogversion</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-007">
-    <TermName>Giltighetsdatum start</TermName>
+    <TermName>Katalog giltig fr.o.m</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-008">
-    <TermName>Giltighetsdatum slut</TermName>
+    <TermName>Katalog giltig t.o.m</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-028">
-    <TermName>Kontraktsidentifierare</TermName>
+    <TermName>Kontraktsreferens</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-019">
     <TermName>Källkatalogidentifierare</TermName>
@@ -1507,7 +1510,7 @@
     <TermName>Antal av artikeln</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-118">
-    <TermName>Tillbehör, artikelnummer</TermName>
+    <TermName>Relaterade artiklar</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-119">
     <TermName>Antal av tillbehörsartikeln</TermName>
@@ -1579,7 +1582,7 @@
     <TermName>Prisets giltighetsdatum slut</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-067">
-    <TermName>Artikelbeskrivning</TermName>
+    <TermName>Produktbeskrivning</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-066">
     <TermName>Paketerad mängd</TermName>
@@ -1600,13 +1603,13 @@
     <TermName>Köparens artikelnummer</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-091">
-    <TermName>Säljarens artikelnummer</TermName>
+    <TermName>Leverantörens artikelnummer</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-114">
     <TermName>Tillverkarens artikelnummer</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-092">
-    <TermName>GTIN</TermName>
+    <TermName>GTIN artikelnummer</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-105">
     <TermName>Bilaga ID</TermName>
@@ -1621,16 +1624,16 @@
     <TermName>Medföljande objekt</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-086">
-    <TermName>Länk till bilaga</TermName>
+    <TermName>Länk till bild</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-071">
     <TermName>Artikelursprungsland</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-069">
-    <TermName>Artikelklassificeringskod</TermName>
+    <TermName>Varugrupp</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-p027">
-    <TermName>Indikator avtalad artikel</TermName>
+    <TermName>Kontraktsartikel</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-072">
     <TermName>Farligt artikel UNDG-kod</TermName>
@@ -1672,7 +1675,7 @@
     <TermName>Artikelbatchidentifierare</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-087">
-    <TermName>Artikelmärkning namn</TermName>
+    <TermName>Artikelmärkning</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-089">
     <TermName>Artikelmärkning typ</TermName>
