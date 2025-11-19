@@ -2364,6 +2364,7 @@ If remittance information is to be mapped to the End To End Identification field
 		<TermName>Dispatch line identifier</TermName>
 		<Description>A indentifier for the individual line in the despatch
 					advice.</Description>
+					<DisplayName>Line ID</DisplayName>
 	</BusinessTerm>
 	<BusinessTerm id="tir16-047">
 		<TermName>Dispatch line note</TermName>
@@ -2442,6 +2443,7 @@ If remittance information is to be mapped to the End To End Identification field
 		<TermName>Order line identifier</TermName>
 		<Description>To uniquely identify the line of the order that is being
 						despatched.</Description>
+						<DisplayName>Order Line ID</DisplayName>
 	</BusinessTerm>
 	<BusinessTerm id="tir16-p047">
 		<TermName>Sales Order Line number. </TermName>
@@ -2453,6 +2455,8 @@ If remittance information is to be mapped to the End To End Identification field
 	<BusinessTerm id="tir16-p053">
 		<TermName>Document identifier</TermName>
 		<Description>An identifier for the referenced document.</Description>
+		<DisplayName>Document Reference</DisplayName>
+		
 	</BusinessTerm>
 	<BusinessTerm id="tir16-p054">
 		<TermName>Document description</TermName>
@@ -2467,6 +2471,12 @@ If remittance information is to be mapped to the End To End Identification field
 	<BusinessTerm id="tir16-p001">
 		<TermName>Despatching party identifier</TermName>
 		<Description>The identifier of the despatching party</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-postaladdress">
+		<TermName>Postal Address</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-contact">
+		<TermName>Contact</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir16-p012">
 		<TermName>Address line 1</TermName>
@@ -2611,6 +2621,11 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>The common name of the city where the postal address is. The
 							name is written in full rather than as a code.</Description>
 	</BusinessTerm>
+		<BusinessTerm id="tir16-052">
+		<TermName>Item name</TermName>
+		<Description>A short name for an item.</Description>
+	</BusinessTerm>
+	
 	<BusinessTerm id="tir16-p021">
 		<TermName>Post code</TermName>
 		<Description>The identifier for an addressable group of properties according
@@ -2765,7 +2780,7 @@ If remittance information is to be mapped to the End To End Identification field
             properties.</Description>
 	</BusinessTerm>
 	<BusinessTerm id="tir16-p057">
-		<TermName>Product traceable identifier.</TermName>
+		<TermName>Product traceable identifier</TermName>
 		<Description>An identifier used for tracing this item instance, such as the EPC number used in RFID.</Description>
 	</BusinessTerm>
 	<BusinessTerm id="tir16-079">
@@ -2783,7 +2798,9 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>Serial numbers for items listed in the dispatch
 							line.</Description>
 	</BusinessTerm>
-	
+	<BusinessTerm id="tir16-MeasurementDimension">
+		<TermName>Measurement Dimension</TermName>
+	</BusinessTerm>
 	
 	<BusinessTerm id="tir16-061">
 		<TermName>Handling unit identifier</TermName>
@@ -3011,6 +3028,52 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>An additional address line in an address that can be used
 										to give further details supplementing the main line.</Description>
 	</BusinessTerm>
+	<BusinessTerm id="tir16-DespatchSupplierParty">
+		<TermName>Despatching party information</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-DeliveryCustomerParty">
+		<TermName>Consignee information</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-BuyerParty">
+		<TermName>Buyer</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-SellerParty">
+		<TermName>Seller</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-OriginatorCustomerParty">
+		<TermName>Originator customer party</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-Shipment">
+		<TermName>Shipment information</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-AdditionalDocumentReference">
+		<TermName>Additional documents</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-Consignment">
+		<TermName>Consignment information</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-Carrier">
+		<TermName>Carrier Party</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-OrderlineReference">
+		<TermName>Order Line Reference</TermName>
+	</BusinessTerm>
+	
+		<BusinessTerm id="tir16-Despatch">
+		<TermName>Actual or expected despatch period</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-DespatchAddress">
+		<TermName>Despatch address</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-DespatchLines">
+		<TermName>DESPATCH LINES</TermName>
+	</BusinessTerm>
 	<BusinessTerm id="tir16-p038">
 		<TermName>Country code</TermName>
 		<Description>A code that identifies the country.The lists of valid
@@ -3019,6 +3082,7 @@ If remittance information is to be mapped to the End To End Identification field
 										subdivisions". Codes must be according to the alpha-2
 										representation.</Description>
 	</BusinessTerm>
+	
 	<BusinessTerm id="tir01-p035">
 		<TermName>Country code</TermName>
 		<Description>A code that identifies the country.The lists of valid

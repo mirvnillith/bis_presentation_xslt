@@ -221,7 +221,7 @@ padding-top:1vw;
       </head>
       <body>
         <div id="wrapper">
-          <!-- Start on Order Type row-->
+          <!-- Start on Despatch Type row-->
           <div class="row" id="bottomrow">
             <div class="col-6">
 
@@ -243,7 +243,7 @@ padding-top:1vw;
               <div class="col-6">
                 <p align="left">
                   <b>
-                  <!-- Inserting Despatch issue Date -->
+                  <!-- Inserting Despatch Issue Date -->
                     <xsl:call-template name="LabelName">
                       <xsl:with-param name="BT-ID" select="'tir16-004'"/>
                       <xsl:with-param name="Colon-Suffix" select="'false'"/>
@@ -251,45 +251,33 @@ padding-top:1vw;
                   </b>
                   <br/>
                   
-                  <xsl:value-of select="cbc:IssueDate"/>&#160;<xsl:value-of select="cbc:IssueTime"/>
+                  <xsl:value-of select="cbc:IssueDate"/>
                   <br/>
                 </p>
-                <xsl:if test="cac:ValidityPeriod/cbc:StartDate">
+                <xsl:if test="cbc:IssueTime">
                   <p align="left">
                     <b>
                       <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-007'"/>
+                        <xsl:with-param name="BT-ID" select="'tir16-005'"/>
                         <xsl:with-param name="Colon-Suffix" select="'false'"/>
                       </xsl:call-template>
                     </b>
                     <br/>
-                    <xsl:apply-templates select="cac:ValidityPeriod/cbc:StartDate"/>
+                    <xsl:apply-templates select="cbc:IssueTime"/>
                     <br/>
                   </p>
                 </xsl:if>
-                <xsl:if test="cac:ValidityPeriod/cbc:EndDate">
+               
+                 <xsl:if test="cbc:Note">
                   <p align="left">
                     <b>
                       <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-008'"/>
+                        <xsl:with-param name="BT-ID" select="'tir16-088'"/>
                         <xsl:with-param name="Colon-Suffix" select="'false'"/>
                       </xsl:call-template>
                     </b>
                     <br/>
-                    <xsl:apply-templates select="cac:ValidityPeriod/cbc:EndDate"/>
-                    <br/>
-                  </p>
-                </xsl:if>
-                 <xsl:if test="cbc:ActionCode">
-                  <p align="left">
-                    <b>
-                      <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-047'"/>
-                        <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                      </xsl:call-template>
-                    </b>
-                    <br/>
-                    <xsl:apply-templates select="cbc:ActionCode"/>
+                    <xsl:apply-templates select="cbc:Note"/>
                     <br/>
                   </p>
                 </xsl:if>
@@ -299,7 +287,7 @@ padding-top:1vw;
                 <p align="left">
                   <b>
                     <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-003'"/>
+                      <xsl:with-param name="BT-ID" select="'tir16-003'"/>
                       <xsl:with-param name="Colon-Suffix" select="'false'"/>
                     </xsl:call-template>
                   </b>
@@ -320,47 +308,148 @@ padding-top:1vw;
                   <xsl:value-of select="cbc:Note"/>
                   <br/>
                 </p>
-                <p align="left">
-                  <b>
-                    <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-028'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                    </xsl:call-template>
-                  </b>
-                  <br/>
-                  <!-- Inserting Order Reference:  -->
-                  <xsl:value-of select="cac:OrderReference/cbc:ID"/>
-                  <br/>
-                </p>
-                <p align="left">
-                  <b>
-                    <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-004'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                    </xsl:call-template>
-                  </b>
-                  <br/>
-                  <!-- Inserting Catalogue Version  -->
-                  <xsl:value-of select="cbc:VersionID"/>
-                  <br/>
-                </p>
+                 <xsl:if test="cac:OrderReference/cbc:ID">
+                  <p align="left">
+                    <b>
+                      <xsl:call-template name="LabelName">
+                        <xsl:with-param name="BT-ID" select="'tir16-006'"/>
+                        <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                      </xsl:call-template>
+                    </b>
+                    <br/>
+                    <xsl:apply-templates select="cac:OrderReference/cbc:ID"/>
+                    <br/>
+                  </p>
+                </xsl:if>
               </div>
             </div>
-            <!--End of Order Header Information-->
+            <!--End of Despatch Header Information-->
           </div>
           <div class="row" id="headerrow">
-            <div class="col-6">
-              <!-- Inserting Delivery Customer Party -->
+            <div class="col-6">  <!-- Inserting Despatch Supplier Party -->
+             
               <p>
                 <b>
                   <xsl:call-template name="LabelName">
-                    <xsl:with-param name="BT-ID" select="'tir19-ReceiverParty'"/>
+                    <xsl:with-param name="BT-ID" select="'tir16-DespatchSupplierParty'"/>
                     <xsl:with-param name="Colon-Suffix" select="'false'"/>
                   </xsl:call-template>
                 </b>
                 <br/>
                 <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-012'"/>
+                      <xsl:with-param name="BT-ID" select="'tir16-071'"/>
+                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
+                </xsl:call-template>
+                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID"/>
+					      <xsl:if test="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID/@schemeID">
+						    [<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID/@schemeID"/>]
+					      </xsl:if>
+				        <br/>  
+			          	<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID">
+				       <xsl:call-template name="LabelName">
+                      <xsl:with-param name="BT-ID" select="'tir16-p001'"/>
+                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
+                </xsl:call-template>
+                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID"/>
+					    <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID">
+						  [<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID"/>]
+						  <br/>
+					  </xsl:if>
+				    </xsl:if>
+				    <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress">
+				    <b>
+				    <xsl:call-template name="LabelName">
+                      <xsl:with-param name="BT-ID" select="'tir16-postaladdress'"/>
+                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                </xsl:call-template>
+                </b>
+				    <br/>
+					    <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:StreetName">
+					    <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:StreetName"/>
+				    	<br/>
+				    	</xsl:if>
+					  <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName">
+				  	<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName"/>
+					<br/>
+					</xsl:if>
+					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CityName">
+					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CityName"/>
+					<br/>
+					</xsl:if>
+					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:PostalZone">
+					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:PostalZone"/>
+					<br/>
+					</xsl:if>
+					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity">
+					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity"/>
+					<br/>
+					</xsl:if>
+					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AddressLine/cbc:Line">
+					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AddressLine/cbc:Line"/>
+					<br/>
+					</xsl:if>
+					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode">
+					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode"/>
+					</xsl:if>
+				</xsl:if>
+              <br/>
+              <xsl:call-template name="LabelName">
+                      <xsl:with-param name="BT-ID" select="'tir16-007'"/>
+                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
+                </xsl:call-template>
+                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName"/>
+             
+				<br/>
+			<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:Contact">
+				    <b>
+				    <xsl:call-template name="LabelName">
+                      <xsl:with-param name="BT-ID" select="'tir16-contact'"/>
+                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                </xsl:call-template>
+                </b>
+				    <br/>
+					    <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:Contact/cbc:Name">
+					    <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:Contact/cbc:Name"/>
+				    	<br/>
+				    	</xsl:if>
+					  <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:Contact/cbc:Telephone">
+				  	<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:Contact/cbc:Telephone"/>
+					<br/>
+					</xsl:if>
+					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:Contact/cbc:ElectronicMail">
+					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:Contact/cbc:ElectronicMail"/>
+					<br/>
+					</xsl:if>
+				</xsl:if>
+              </p>
+            </div>  
+			<div class="col-6"> <!-- Inserting Seller Supplier Party -->
+              <p>
+                <b>
+                  <xsl:call-template name="LabelName">
+                    <xsl:with-param name="BT-ID" select="'tir16-SellerParty'"/>
+                    <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                  </xsl:call-template>
+                </b>
+                <br/>
+                <xsl:apply-templates select="cac:SellerSupplierParty"/>
+                <br/>
+              </p>
+            </div>   
+          </div>
+          <div class="row" id="headerrow">
+            <div class="col-6">  <!-- Inserting Delivery Customer Party -->
+             
+              <p>
+                <b>
+                  <xsl:call-template name="LabelName">
+                    <xsl:with-param name="BT-ID" select="'tir16-DeliveryCustomerParty'"/>
+                    <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                  </xsl:call-template>
+                </b>
+                <br/>
+                <xsl:call-template name="LabelName">
+                      <xsl:with-param name="BT-ID" select="'tir16-016'"/>
                       <xsl:with-param name="Colon-Suffix" select="'true'"/>
                 </xsl:call-template>
                 <xsl:apply-templates select="cac:DeliveryCustomerParty/cac:Party/cbc:EndpointID"/>
@@ -370,7 +459,7 @@ padding-top:1vw;
 				<br/>  
 				<xsl:if test="cac:DeliveryCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID">
 				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-013'"/>
+                      <xsl:with-param name="BT-ID" select="'tir16-015'"/>
                       <xsl:with-param name="Colon-Suffix" select="'true'"/>
                 </xsl:call-template>
                 <xsl:apply-templates select="cac:DeliveryCustomerParty/cac:Party/cac:PartyIdentification/cbc:ID"/>
@@ -382,13 +471,13 @@ padding-top:1vw;
 				<xsl:if test="cac:DeliveryCustomerParty/cac:Party/cac:PostalAddress">
 				<b>
 				<xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p029'"/>
+                      <xsl:with-param name="BT-ID" select="'tir16-postaladdress'"/>
                       <xsl:with-param name="Colon-Suffix" select="'false'"/>
                 </xsl:call-template>
                 </b>
 				<br/>
 					<xsl:if test="cac:DeliveryCustomerParty/cac:Party/cac:PostalAddress/cbc:StreetName">
-					<xsl:apply-templates select="cac:ReceiverParty/cac:PostalAddress/cbc:StreetName"/>
+					<xsl:apply-templates select="cac:DeliveryCustomerParty/cac:Party/cac:PostalAddress/cbc:StreetName"/>
 					<br/>
 					</xsl:if>
 					<xsl:if test="cac:DeliveryCustomerParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName">
@@ -417,333 +506,92 @@ padding-top:1vw;
 				</xsl:if>
               <br/>
               <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-014'"/>
+                      <xsl:with-param name="BT-ID" select="'tir16-014'"/>
                       <xsl:with-param name="Colon-Suffix" select="'true'"/>
                 </xsl:call-template>
                 <xsl:apply-templates select="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName"/>
                <br/>
-               <xsl:if test="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p030a'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID"/>
-					<xsl:if test="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID">
-						[<xsl:value-of select="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID"/>]
-					</xsl:if>
-					<br/>
-				</xsl:if>
-				 <xsl:if test="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cbc:CityName">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p030c'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cbc:CityName"/>
-                <br/>
-				</xsl:if>
-					 <xsl:if test="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cac:Country/cbc:IdentificationCode">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p030d'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DeliveryCustomerParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cac:Country/cbc:IdentificationCode"/>
-                <br/>
-				</xsl:if>
               </p>
             </div>
-            <div class="col-6">
-            <!-- Inserting Buyer Customer Party-->
-              <p>
+            <div class="col-3">  <!--Inserting Buyer Customer Party-->
+             
+                    <p>
                 <b>
                   <xsl:call-template name="LabelName">
-                    <xsl:with-param name="BT-ID" select="'BG-7'"/>
+                    <xsl:with-param name="BT-ID" select="'tir16-BuyerParty'"/>
                     <xsl:with-param name="Colon-Suffix" select="'false'"/>
                   </xsl:call-template>
                 </b>
                 <br/>
                 <xsl:apply-templates select="cac:BuyerCustomerParty"/>
                 <br/>
-                <xsl:if test="cac:BuyerCustomerParty/cac:Party/cac:Contact">
-                <p>
-                  <b>
-                    <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'BG-9'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                    </xsl:call-template>
-                  </b>
-                  <xsl:call-template name="SellerContact_Order"/>
-                </p>
-              </xsl:if>
               </p>
             </div>
-          </div>
+            <div class="col-3"> <!--Insert OriginatorCustomerParty-->
+              <p>
+                <b>
+                  <xsl:call-template name="LabelName">
+                    <xsl:with-param name="BT-ID" select="'tir16-OriginatorCustomerParty'"/>
+                    <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                  </xsl:call-template>
+                </b>
+                <br/>
+                <xsl:apply-templates select="cac:OriginatorCustomerParty"/>
+                <br/>
+              </p>
+            </div>     
+          </div>        
           <div class="row" id="headerrow">
-            <div class="col-6">
-              <!-- Inserting Despatch Supplier Party -->
+            <div class="col-6"> <!-- Inserting Additional Document Reference -->
+              
               <p>
                 <b>
                   <xsl:call-template name="LabelName">
-                    <xsl:with-param name="BT-ID" select="'tir19-ProviderParty'"/>
+                    <xsl:with-param name="BT-ID" select="'tir16-AdditionalDocumentReference'"/>
                     <xsl:with-param name="Colon-Suffix" select="'false'"/>
                   </xsl:call-template>
                 </b>
-                <br/>
-                <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-009'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID"/>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID/@schemeID">
-						[<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID/@schemeID"/>]
-					</xsl:if>
-				<br/>  
-				<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-010'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID"/>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID">
-						[<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID"/>]
-						<br/>
-					</xsl:if>
+                <xsl:if test="cac:AdditionalDocumentReference">
+					<br/>
+					<xsl:apply-templates select="cac:AdditionalDocumentReference" mode="DespatchAdvice"/>
 				</xsl:if>
-				<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress">
-				<b>
-				<xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p031'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                </xsl:call-template>
-                </b>
-				<br/>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:StreetName">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:StreetName"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CityName">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CityName"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:PostalZone">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:PostalZone"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AddressLine/cbc:Line">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AddressLine/cbc:Line"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode"/>
-					</xsl:if>
-				</xsl:if>
-              <br/>
-              <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-011'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName"/>
-               <br/>
-               <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p028a'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID"/>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID">
-						[<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID"/>]
-					</xsl:if>
-					<br/>
-				</xsl:if>
-				 <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cbc:CityName">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p028c'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cbc:CityName"/>
-                <br/>
-				</xsl:if>
-					 <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cac:Country/cbc:IdentificationCode">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p028d'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cac:Country/cbc:IdentificationCode"/>
-                <br/>
-				</xsl:if>
-              </p>
+            </p>
             </div>
-            <div class="col-6">
-            <!--Inserting Seller Supplier Party-->
-              <div class="row" id="headerrow">
-            <div class="col-6">
-              <!-- Inserting Despatch Supplier Party -->
+            <div class="col-6"> <!-- Inserting Shipment -->
+              
               <p>
                 <b>
                   <xsl:call-template name="LabelName">
-                    <xsl:with-param name="BT-ID" select="'tir19-ProviderParty'"/>
+                    <xsl:with-param name="BT-ID" select="'tir16-Shipment'"/>
                     <xsl:with-param name="Colon-Suffix" select="'false'"/>
                   </xsl:call-template>
                 </b>
                 <br/>
-                <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-009'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID"/>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID/@schemeID">
-						[<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID/@schemeID"/>]
-					</xsl:if>
-				<br/>  
-				<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-010'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID"/>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID">
-						[<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cac:PartyIdentification/cbc:ID/@schemeID"/>]
-						<br/>
-					</xsl:if>
-				</xsl:if>
-				<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress">
-				<b>
-				<xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p031'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                </xsl:call-template>
-                </b>
-				<br/>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:StreetName">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:StreetName"/>
+                <xsl:if test="cac:Shipment">
 					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AdditionalStreetName"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CityName">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CityName"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:PostalZone">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:PostalZone"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:CountrySubentity"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AddressLine/cbc:Line">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cbc:AddressLine/cbc:Line"/>
-					<br/>
-					</xsl:if>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode">
-					<xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode"/>
-					</xsl:if>
-				</xsl:if>
-              <br/>
-              <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-011'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName"/>
-               <br/>
-               <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p028a'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID"/>
-					<xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID">
-						[<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:CompanyID/@schemeID"/>]
-					</xsl:if>
-					<br/>
-				</xsl:if>
-				 <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cbc:CityName">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p028c'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cbc:CityName"/>
-                <br/>
-				</xsl:if>
-					 <xsl:if test="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cac:Country/cbc:IdentificationCode">
-				   <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-p028d'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                </xsl:call-template>
-                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cac:RegistrationAddress/cac:Country/cbc:IdentificationCode"/>
-                <br/>
-				</xsl:if>
-              </p>
-            </div>
-            <div class="col-6">
-              <p>
-                <b>
-                  <xsl:call-template name="LabelName">
-                    <xsl:with-param name="BT-ID" select="'BG-4'"/>
-                    <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                  </xsl:call-template>
-                </b>
-                <br/>
-                <xsl:apply-templates select="cac:SellerSupplierParty"/>
-                <br/>
-                <xsl:if test="cac:SellerSupplierParty/cac:Party/cac:Contact">
-                <p>
-                  <b>
-                    <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'BG-9'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                    </xsl:call-template>
-                  </b>
-                  <xsl:call-template name="SellerContact_Order"/>
-                </p>
-              </xsl:if>
+					<xsl:apply-templates select="cac:Shipment" mode="DespatchAdviceHeader"/>
+				</xsl:if> 
               </p>
             </div>
           </div>
-      <!--Insert OriginatorCustomerParty and Shipment on a line-->
-              <p>
-                <b>
-                  <xsl:call-template name="LabelName">
-                    <xsl:with-param name="BT-ID" select="'BG-4'"/>
-                    <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                  </xsl:call-template>
-                </b>
-                <br/>
-                <xsl:apply-templates select="cac:SellerSupplierParty"/>
-                <br/>
-                <xsl:if test="cac:SellerSupplierParty/cac:Party/cac:Contact">
-                <p>
-                  <b>
-                    <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'BG-9'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                    </xsl:call-template>
-                  </b>
-                  <xsl:call-template name="SellerContact_Order"/>
-                </p>
-              </xsl:if>
-              </p>
-            </div>
+         <!--Start DespatchLine-->
+           <div class="col-12">
+            <br/>
+            <h3>
+              <xsl:call-template name="LabelName">
+                <xsl:with-param name="BT-ID" select="'tir16-DespatchLines'"/>
+                <xsl:with-param name="Colon-Suffix" select="'false'"/>
+              </xsl:call-template>
+            </h3>
           </div>
-          <!--Start DespatchLine-->
           <div class="row" id="tablerow">
             <div class="col-12">
               <table>
-                <tr class="UBLCatalogueLineHeader">
-                <th align="left" valign="top" width="5%">
+                <tr class="UBLOrderLineHeader">
+                  <th align="left" valign="top" width="5%">
                     <b>
                       <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-032'"/>
+                        <xsl:with-param name="BT-ID" select="'tir16-046'"/>
                         <xsl:with-param name="Colon-Suffix" select="'false'"/>
                       </xsl:call-template>
                     </b>
@@ -751,7 +599,23 @@ padding-top:1vw;
                   <th align="left" valign="top" width="10%">
                     <b>
                       <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-091'"/>
+                        <xsl:with-param name="BT-ID" select="'tir16-OrderlineReference'"/>
+                        <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                      </xsl:call-template>
+                    </b>
+                  </th>
+                  <th align="left" valign="top" width="35%">
+                    <b>
+                      <xsl:call-template name="LabelName">
+                        <xsl:with-param name="BT-ID" select="'Order_Item'"/>
+                        <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                      </xsl:call-template>
+                    </b>
+                  </th>
+                  <th valign="top" align="left" width="10%">
+                    <b>
+                      <xsl:call-template name="LabelName">
+                        <xsl:with-param name="BT-ID" select="'BT-129'"/>
                         <xsl:with-param name="Colon-Suffix" select="'false'"/>
                       </xsl:call-template>
                     </b>
@@ -759,41 +623,26 @@ padding-top:1vw;
                   <th align="left" valign="top" width="10%">
                     <b>
                       <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-092'"/>
+                        <xsl:with-param name="BT-ID" select="'tir16-047'"/>
                         <xsl:with-param name="Colon-Suffix" select="'false'"/>
                       </xsl:call-template>
+                      <br/>
                     </b>
                   </th>
-                   <th align="left" valign="top" width="10%">
+                  <th align="left" valign="top" width="30%">
                     <b>
                       <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-078'"/>
-                        <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                      </xsl:call-template>
-                    </b>
-                  </th>
-                  <th align="left" valign="top" width="55%">
-                    <b>
-                      <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-catalogueline'"/>
-                        <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                      </xsl:call-template>
-                    </b>
-                  </th>
-                  <th valign="top" align="right" width="10%">
-                    <b>
-                      <xsl:call-template name="LabelName">
-                        <xsl:with-param name="BT-ID" select="'tir19-051'"/>
+                        <xsl:with-param name="BT-ID" select="'tir16-Shipment'"/>
                         <xsl:with-param name="Colon-Suffix" select="'false'"/>
                       </xsl:call-template>
                     </b>
                   </th>
                 </tr>
-                <xsl:apply-templates select="cac:DespatchLine" mode="Despatch"/>
+               <xsl:apply-templates select="cac:DespatchLine" mode="despatch"/>
               </table>
             </div>
           </div>
-          <!--End Catalogueline-->
+          <!--End Despatchline-->
     
           <!-- Start on technical stylesheet footer - for all transactions -->
           <div class="row" id="tablerow">
@@ -801,22 +650,22 @@ padding-top:1vw;
               <p>
                 <small>
                   <xsl:call-template name="LabelName">
-                    <xsl:with-param name="BT-ID" select="'BT-34'"/>
-                    <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                  </xsl:call-template>
-                  <xsl:apply-templates select="cac:SellerSupplierParty/cac:Party/cbc:EndpointID"/>
-                  <xsl:if test="cac:SellerSupplierParty/cac:Party/cbc:EndpointID/@schemeID">
-											[<xsl:value-of select="cac:SellerSupplierParty/cac:Party/cbc:EndpointID/@schemeID"/>]
-										</xsl:if>
+                      <xsl:with-param name="BT-ID" select="'tir16-071'"/>
+                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
+                </xsl:call-template>
+                <xsl:apply-templates select="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID"/>
+					      <xsl:if test="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID/@schemeID">
+						    [<xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cbc:EndpointID/@schemeID"/>]
+					      </xsl:if>
                   <br/>
-                  <xsl:call-template name="LabelName">
-                    <xsl:with-param name="BT-ID" select="'BT-49'"/>
-                    <xsl:with-param name="Colon-Suffix" select="'true'"/>
-                  </xsl:call-template>
-                  <xsl:apply-templates select="cac:ContractorCustomerParty/cac:Party/cbc:EndpointID"/>
-                  <xsl:if test="cac:ContractorCustomerParty/cac:Party/cbc:EndpointID/@schemeID">
-										[<xsl:value-of select="cac:ContractorCustomerParty/cac:Party/cbc:EndpointID/@schemeID"/>]
-										</xsl:if>
+                 <xsl:call-template name="LabelName">
+                      <xsl:with-param name="BT-ID" select="'tir16-016'"/>
+                      <xsl:with-param name="Colon-Suffix" select="'true'"/>
+                </xsl:call-template>
+                <xsl:apply-templates select="cac:DeliveryCustomerParty/cac:Party/cbc:EndpointID"/>
+					<xsl:if test="cac:DeliveryCustomerParty/cac:Party/cbc:EndpointID/@schemeID">
+						[<xsl:value-of select="cac:DeliveryCustomerParty/cac:Party/cbc:EndpointID/@schemeID"/>]
+					</xsl:if>
                   <br/> 
                   <xsl:value-of select="cbc:UBLVersionID"/>
                   <br/>
@@ -836,7 +685,7 @@ padding-top:1vw;
                     <br/>
                   </xsl:if>
                   <br/>
-                  <br/>This Order visualization is generated from SFTI BIS Catalogue 3 XSL Stylesheet Version 1.1<br/>
+                  <br/>This Despatch visualization is generated from SFTI BIS Despatch Advice 3 XSL Stylesheet Version 1.1<br/>
                 </small>
               </p>
             </div>
