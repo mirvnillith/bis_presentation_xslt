@@ -2289,7 +2289,6 @@ If remittance information is to be mapped to the End To End Identification field
 	</BusinessTerm>
 	
 	<!--DespatchAdvice-->
-	
 	<BusinessTerm id="tir16-002">
 		<TermName>Specification identification</TermName>
 		<Description>Identifies the specification of content and rules that apply to the
@@ -2320,8 +2319,6 @@ If remittance information is to be mapped to the End To End Identification field
 		<TermName>Dispatch note</TermName>
 		<Description>A textual note for the dispatch as whole.</Description>
 	</BusinessTerm>
-	
-	
 	<BusinessTerm id="tir16-006">
 		<TermName>Order reference</TermName>
 		<Description>Used to provide a reference to the order on which the despatch is
@@ -2391,18 +2388,14 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>The attached document embeded as binary object, coded as Base64.
 					The binary object has two supplementary components: a Mime Code, which specifies the Mime type of the attachment and a Filename that is provided by (or on behalf of) the sender of the document</Description>
 	</BusinessTerm>
-	
 	<BusinessTerm id="tir16-071">
 		<TermName>Despatch party electronic address</TermName>
 		<Description>Identifies the despatch party's electronic address</Description>
 	</BusinessTerm>
-	
-	
 	<BusinessTerm id="tir16-016">
 		<TermName>Consignee party electronic address</TermName>
 		<Description>Identifies the consignee party's electronic address</Description>
 	</BusinessTerm>
-	
 	<BusinessTerm id="tir16-024">
 		<TermName>Contact person name</TermName>
 		<Description>The name of the contact person.</Description>
@@ -2417,8 +2410,6 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>The e-mail address for the contact person. If the person has a
 						direct e-mail this is that email.</Description>
 	</BusinessTerm>
-	
-	
 	<BusinessTerm id="tir16-040">
 		<TermName>Consignment identifier</TermName>
 		<Description>An association to Consignment covering the shipment. Unique number
@@ -2451,7 +2442,6 @@ If remittance information is to be mapped to the End To End Identification field
 						despatched.
 					</Description>
 	</BusinessTerm>
-	
 	<BusinessTerm id="tir16-p053">
 		<TermName>Document identifier</TermName>
 		<Description>An identifier for the referenced document.</Description>
@@ -2555,7 +2545,6 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>For specifying a region, county, state, province etc. within a
 							country by using text.</Description>
 	</BusinessTerm>
-	
 	<BusinessTerm id="tir16-014">
 		<TermName>Consignee party name</TermName>
 		<Description>The name of the receiving party.</Description>
@@ -2595,8 +2584,6 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>For specifying a region, county, state, province etc. within a
 							country by using text.</Description>
 	</BusinessTerm>
-	
-	
 	<BusinessTerm id="tir16-066">
 		<TermName>Selling party identifier</TermName>
 		<Description>An identifier for the seller party.</Description>
@@ -2896,59 +2883,7 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>The name of the carrier that handles the delivery of the
 								dispatched shipment.</Description>
 	</BusinessTerm>
-	
-	<BusinessTerm id="tir01-101">
-		<TermName>Delivery party identifier</TermName>
-		<Description>In this BIS: The identifier of the party that should receive the
-								ordered items</Description>
-	</BusinessTerm>
-	<BusinessTerm id="tir01-102">
-		<TermName>Delivery party name</TermName>
-		<Description>In this
-								BIS: The name of the party that should receive the delivery</Description>
-	</BusinessTerm>
-	<BusinessTerm id="tir01-p029">
-		<TermName>Address line 1</TermName>
-		<Description>The main address line in a postal address usually the street
-									name and number.</Description>
-	</BusinessTerm>
-	<BusinessTerm id="tir01-p030">
-		<TermName>Address line 2</TermName>
-		<Description>An additional address line in a postal address that can be used
-									to give further details supplementing the main line. Common use are
-									secondary house number in a complex or in a building.</Description>
-	</BusinessTerm>
-	<BusinessTerm id="tir01-p031">
-		<TermName>City</TermName>
-		<Description>The common name of the city where the postal address is. The
-									name is written in full rather than as a code.</Description>
-	</BusinessTerm>
-	<BusinessTerm id="tir01-p032">
-		<TermName>Post code</TermName>
-		<Description>The identifier for an addressable group of properties according
-									to the relevant national postal service, such as a ZIP code or Post
-									Code.</Description>
-	</BusinessTerm>
-	<BusinessTerm id="tir01-p033">
-		<TermName>Country subdivision</TermName>
-		<Description>For specifying a region, county, state, province etc. within a
-									country by using text.</Description>
-	</BusinessTerm>
-	
-	<BusinessTerm id="tir01-103">
-		<TermName>Contact person name</TermName>
-		<Description>The name of the contact person.</Description>
-	</BusinessTerm>
-	<BusinessTerm id="tir01-104">
-		<TermName>Contact telephone number</TermName>
-		<Description>A phone number for the contact person. If the person has a
-								direct number, this is that number.</Description>
-	</BusinessTerm>
-	<BusinessTerm id="tir01-106">
-		<TermName>Contact email address</TermName>
-		<Description>The e-mail address for the contact person. If the person has a
-							direct e-mail this is that email.</Description>
-	</BusinessTerm>
+
 	<BusinessTerm id="tir16-p046">
 		<TermName>Identifier</TermName>
 		<Description>An identifier for the location to which the goods and services are despatched.</Description>
@@ -3023,11 +2958,6 @@ If remittance information is to be mapped to the End To End Identification field
 		<Description>The type of document used for identifying the driver,
 									expressed in text.</Description>
 	</BusinessTerm>
-	<BusinessTerm id="tir01-p034">
-		<TermName>Address line 3</TermName>
-		<Description>An additional address line in an address that can be used
-										to give further details supplementing the main line.</Description>
-	</BusinessTerm>
 	<BusinessTerm id="tir16-DespatchSupplierParty">
 		<TermName>Despatching party information</TermName>
 	</BusinessTerm>
@@ -3083,14 +3013,6 @@ If remittance information is to be mapped to the End To End Identification field
 										representation.</Description>
 	</BusinessTerm>
 	
-	<BusinessTerm id="tir01-p035">
-		<TermName>Country code</TermName>
-		<Description>A code that identifies the country.The lists of valid
-										countries are registered with the ISO 3166-1 Maintenance agency,
-										"Codes for the representation of names of countries and their
-										subdivisions". Codes must be according to the alpha-2
-										representation.</Description>
-	</BusinessTerm>
 	
 	
 	

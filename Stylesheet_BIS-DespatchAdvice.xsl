@@ -236,7 +236,7 @@ padding-top:1vw;
                 </xsl:call-template>
               </h3>
               <h1>
-                    <xsl:value-of select="cac:DespatchSupplierParty/cac:PartyLegalEntity/cbc:RegistrationName"/>
+                    <xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName"/>
               </h1>
             </div>
             <div class="col-6" id="header">
