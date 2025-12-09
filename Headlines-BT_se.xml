@@ -442,7 +442,7 @@
 	</BusinessTerm>
 	<BusinessTerm id="BT-128-1">
 		<TermName>Objektreferenstyp</TermName>
-		<DisplayName>Typ</DisplayName>
+		<DisplayName>Faktureringsobjekt</DisplayName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-129">
 		<TermName>Fakturerad kvantitet</TermName>
@@ -517,10 +517,10 @@
 		<TermName>Bruttopris</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-149">
-		<TermName>Baskvantitet</TermName>
+		<TermName>Basantal för artikelpris</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-150">
-		<TermName>Baskvantitet kod</TermName>
+		<TermName>Basantal kod</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BG-30">
 		<TermName>FAKTURARAD SKATTEINFORMATION</TermName>
@@ -541,13 +541,13 @@
 		<TermName>Beskrivning</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-155">
-		<TermName>Säljarens artikelnr</TermName>
+		<TermName>Leverantörens artikelnummer</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-156">
 		<TermName>Köparens artikelnr</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-157">
-		<TermName>Standard artikelnr</TermName>
+		<TermName>GTIN artikelnummer</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="BT-157-1">
 		<TermName>Typ</TermName>
@@ -659,7 +659,7 @@
 		<TermName>URI för externa dokument</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-019">
-		<TermName>Kontraktsreferens</TermName>
+		<TermName>Avtalsnummer</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-021">
 		<TermName>Köparens elektroniska adress</TermName>
@@ -696,6 +696,9 @@
 	</BusinessTerm>
 	<BusinessTerm id="tir01-p004">
 		<TermName/>
+	</BusinessTerm>
+	<BusinessTerm id="tir01-p45">
+		<TermName>Prislista</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-044">
 		<TermName>Köparens juridiska registreringsnamn</TermName>
@@ -894,7 +897,7 @@
 		<TermName>Leveransparti</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-101">
-		<TermName>Leveransparti identifierare</TermName>
+		<TermName>Leveranspartiidentifierare</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-102">
 		<TermName>Leveransparti namn</TermName>
@@ -933,7 +936,7 @@
 		<TermName>Kontaktpersonens e-postadress</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="tir01-p036">
-		<TermName>Paketerikett</TermName>
+		<TermName>Paketetikett</TermName>
 	</BusinessTerm>
 	<BusinessTerm id="Order_TermsOfDelivery">
 		<TermName>Leveransvillkor</TermName>
@@ -1279,13 +1282,13 @@
     <TermName>Katalogversion</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-007">
-    <TermName>Giltighetsdatum start</TermName>
+    <TermName>Katalog giltig fr.o.m</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-008">
-    <TermName>Giltighetsdatum slut</TermName>
+    <TermName>Katalog giltig t.o.m</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-028">
-    <TermName>Kontraktsidentifierare</TermName>
+    <TermName>Kontraktsreferens</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-019">
     <TermName>Källkatalogidentifierare</TermName>
@@ -1507,7 +1510,7 @@
     <TermName>Antal av artikeln</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-118">
-    <TermName>Tillbehör, artikelnummer</TermName>
+    <TermName>Relaterade artiklar</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-119">
     <TermName>Antal av tillbehörsartikeln</TermName>
@@ -1579,7 +1582,7 @@
     <TermName>Prisets giltighetsdatum slut</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-067">
-    <TermName>Artikelbeskrivning</TermName>
+    <TermName>Produktbeskrivning</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-066">
     <TermName>Paketerad mängd</TermName>
@@ -1600,13 +1603,13 @@
     <TermName>Köparens artikelnummer</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-091">
-    <TermName>Säljarens artikelnummer</TermName>
+    <TermName>Leverantörens artikelnummer</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-114">
     <TermName>Tillverkarens artikelnummer</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-092">
-    <TermName>GTIN</TermName>
+    <TermName>GTIN artikelnummer</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-105">
     <TermName>Bilaga ID</TermName>
@@ -1621,16 +1624,16 @@
     <TermName>Medföljande objekt</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-086">
-    <TermName>Länk till bilaga</TermName>
+    <TermName>Länk till bild</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-071">
     <TermName>Artikelursprungsland</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-069">
-    <TermName>Artikelklassificeringskod</TermName>
+    <TermName>Varugrupp</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-p027">
-    <TermName>Indikator avtalad artikel</TermName>
+    <TermName>Kontraktsartikel</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-072">
     <TermName>Farligt artikel UNDG-kod</TermName>
@@ -1672,7 +1675,7 @@
     <TermName>Artikelbatchidentifierare</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-087">
-    <TermName>Artikelmärkning namn</TermName>
+    <TermName>Artikelmärkning</TermName>
 </BusinessTerm>
 <BusinessTerm id="tir19-089">
     <TermName>Artikelmärkning typ</TermName>
@@ -1737,4 +1740,744 @@
 		<BusinessTerm id="tir19-additionalitempropertyid">
 		<TermName>Egenskap/Attribut ID</TermName>
 	</BusinessTerm>
+
+
+<!--Despatch Advice -->
+
+
+ <BusinessTerm id="tir16-002">
+    <TermName>Specifikationsidentifiering</TermName>
+    <Description>Identifierar specifikationen för innehåll och regler som gäller för
+        transaktionen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-001">
+    <TermName>Identifierare för affärsprocesstyp</TermName>
+    <Description>Identifierar BII-profilen eller affärsprocesskontexten där
+        transaktionen förekommer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-003">
+    <TermName>Dokumentidentifierare</TermName>
+    <Description>En transaktionsinstans måste innehålla en identifierare. Identifieraren
+        möjliggör positiv referens av dokumentinstansen för olika syften, inklusive
+        referenser mellan transaktioner som ingår i samma process.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-004">
+    <TermName>Utfärdandedatum för leveransavisering</TermName>
+    <Description>Datum då leveransavisering utfärdas. Format =
+        "YYYY-MM-DD"</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-005">
+    <TermName>Utfärdandetid för leveransavisering</TermName>
+    <Description>Tidpunkt då leveransavisering utfärdas. Format =
+        "hh:mm:ss"</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-088">
+    <TermName>leveransnotering</TermName>
+    <Description>En textuell notering för avsändningen som helhet.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-006">
+    <TermName>Orderreferens</TermName>
+    <Description>Används för att ange en referens till beställningen som avsändningen
+        baseras på.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p049">
+    <TermName>Dokumentidentifierare</TermName>
+    <Description>En identifierare för det refererade dokumentet.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p050">
+    <TermName>Dokumentbeskrivning</TermName>
+    <Description>Textuell beskrivning av dokumentet.</Description>
+</BusinessTerm>
+
+
+    <BusinessTerm id="tir16-038">
+    <TermName>Sändningsidentifierare</TermName>
+    <Description>Identifierar en sändning.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-039">
+    <TermName>Sändningsbeskrivning</TermName>
+    <Description>Fritext som gäller en sändning. Detta element kan innehålla noteringar
+        eller annan liknande information som inte uttryckligen finns i en annan
+        struktur.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-074">
+    <TermName>Sändningens bruttovikt</TermName>
+    <Description>Den totala vikten av sändningen inklusive emballage, som skickad
+        från avsändaren.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-075">
+    <TermName>Sändningens bruttovolym</TermName>
+    <Description>Den totala volymen av sändningen inklusive emballage, som skickad
+        från avsändaren.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p002">
+    <TermName>Totalt antal transporthanteringsenheter</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-046">
+    <TermName>Radidentifierare för avsändning</TermName>
+    <Description>En identifierare för den enskilda raden i avsändningsmeddelandet.</Description>
+    <DisplayName>Rad-ID</DisplayName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-047">
+    <TermName>Notering för avsändningsrad</TermName>
+    <Description>Allmän notering gällande avsändningsraden. Fritext som gäller
+        avsändningsraden. Detta element kan innehålla noteringar eller annan liknande
+        information som inte uttryckligen finns i en annan struktur.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-048">
+    <TermName>Levererad kvantitet</TermName>
+    <Description>Den kvantitet som skickas i raden.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-049">
+    <TermName>Utestående kvantitet</TermName>
+    <Description>Den kvantitet som är utestående (och kommer att skickas i en senare
+        sändning).</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-050">
+    <TermName>Orsak till utestående kvantitet</TermName>
+    <Description>Orsaken till den utestående kvantiteten.</Description>
+</BusinessTerm>
+
+
+<BusinessTerm id="tir16-p051">
+    <TermName>Bifogat dokument</TermName>
+    <Description>Det bifogade dokumentet inbäddat som ett binärt objekt, kodat i Base64.
+        Det binära objektet har två kompletterande komponenter: en MIME-kod som anger
+        bilagans MIME-typ och ett filnamn som tillhandahålls av (eller på uppdrag av)
+        dokumentets avsändare.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-071">
+    <TermName>Avsändarparts elektroniska adress</TermName>
+    <Description>Identifierar avsändarpartens elektroniska adress.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-016">
+    <TermName>Mottagarparts elektroniska adress</TermName>
+    <Description>Identifierar mottagarpartens elektroniska adress.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-024">
+    <TermName>Kontaktpersons namn</TermName>
+    <Description>Namnet på kontaktpersonen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-027">
+    <TermName>Kontaktpersonens telefonnummer</TermName>
+    <Description>Ett telefonnummer till kontaktpersonen. Om personen har ett direktnummer
+        är det detta nummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-028">
+    <TermName>Kontaktpersonens e-postadress</TermName>
+    <Description>E-postadressen till kontaktpersonen. Om personen har en direkt e-postadress
+        är det denna adress.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-040">
+    <TermName>Godssändningsidentifierare</TermName>
+    <Description>En koppling till godssändningen som omfattar försändelsen. Unikt nummer
+        tilldelat varor, både för import och export.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-077">
+    <TermName>Fordonsbeskrivning</TermName>
+    <Description>Beskrivning och/eller identifiering av fordonet som transporterar den
+        avsända försändelsen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p056">
+    <TermName>Transportmedelstyp</TermName>
+    <Description>Det transportmedel som användes för att leverera varorna.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-041">
+    <TermName>Leveransspårningsidentifierare</TermName>
+    <Description>Används för att tillhandahålla ett spårnings-ID för leverans, t.ex. UPS
+        eller post.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-051">
+    <TermName>Orderradidentifierare</TermName>
+    <Description>För att unikt identifiera orderraden som avsänds.</Description>
+    <DisplayName>Orderrad-ID</DisplayName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p047">
+    <TermName>Försäljningsorderradnummer</TermName>
+    <Description>För att unikt identifiera raden i försäljningsordern som avsänds.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p053">
+    <TermName>Dokumentidentifierare</TermName>
+    <Description>En identifierare för det refererade dokumentet.</Description>
+    <DisplayName>Dokumentreferens</DisplayName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p054">
+    <TermName>Dokumentbeskrivning</TermName>
+    <Description>Textuell beskrivning av dokumentet.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p052">
+    <TermName>Extern dokument-URI</TermName>
+    <Description>Uniform Resource Identifier (URI) som anger var det externa dokumentet
+        finns.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p001">
+    <TermName>Identifierare för avsändande part</TermName>
+    <Description>Identifieraren för den avsändande parten.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-postaladdress">
+    <TermName>Postadress</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-contact">
+    <TermName>Kontakt</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p012">
+    <TermName>Adressrad 1</TermName>
+    <Description>Huvudadressraden i en postadress, vanligtvis gatunamn och nummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p013">
+    <TermName>Adressrad 2</TermName>
+    <Description>En ytterligare adressrad i en postadress som kan användas för att ge
+        kompletterande detaljer till huvudraden. Vanliga användningar är sekundärt
+        husnummer i ett komplex eller en byggnad.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p014">
+    <TermName>Stad</TermName>
+    <Description>Det vanliga namnet på staden där postadressen finns. Namnet skrivs ut
+        i sin helhet istället för som en kod.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p015">
+    <TermName>Postnummer</TermName>
+    <Description>Identifieraren för en adressbar grupp fastigheter enligt det
+        relevanta nationella postverket, exempelvis ett ZIP-nummer eller postnummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p016">
+    <TermName>Landsdel / region</TermName>
+    <Description>Används för att ange region, län, stat, provins etc. inom ett land
+        genom text.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-007">
+    <TermName>Avsändande parts namn</TermName>
+    <Description>Namnet på den avsändande parten.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-008">
+    <TermName>Kontaktpersons namn</TermName>
+    <Description>Namnet på kontaktpersonen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-012">
+    <TermName>Kontaktpersonens telefonnummer</TermName>
+    <Description>Ett telefonnummer till kontaktpersonen. Om personen har ett direktnummer
+        är det detta nummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-013">
+    <TermName>Kontaktpersonens e-postadress</TermName>
+    <Description>E-postadressen till kontaktpersonen. Om personen har en direktadress
+        är det denna.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-015">
+    <TermName>Mottagarparts identifierare</TermName>
+    <Description>Identifieraren för den mottagande parten.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-018">
+    <TermName>Adressrad 1</TermName>
+    <Description>Huvudadressraden i en postadress, vanligtvis gatunamn och nummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-019">
+    <TermName>Adressrad 2</TermName>
+    <Description>En ytterligare adressrad i en postadress som kan användas för att ge
+        kompletterande detaljer till huvudraden. Vanliga användningar är sekundärt
+        husnummer i ett komplex eller en byggnad.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-020">
+    <TermName>Stad</TermName>
+    <Description>Det vanliga namnet på staden där postadressen finns. Namnet skrivs i
+        klartext snarare än som en kod.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-021">
+    <TermName>Postnummer</TermName>
+    <Description>Identifieraren för en adressbar grupp fastigheter enligt det relevanta
+        nationella postverket, såsom ett ZIP-nummer eller postnummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-022">
+    <TermName>Landsdel / region</TermName>
+    <Description>Används för att ange region, län, stat, provins etc. inom ett land genom text.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-014">
+    <TermName>Mottagarparts namn</TermName>
+    <Description>Namnet på den mottagande parten.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-030">
+    <TermName>Köparpartens identifierare</TermName>
+    <Description>Identifieraren för köparparten.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-029">
+    <TermName>Köparpartens namn</TermName>
+    <Description>Namnet på köparparten.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p025">
+    <TermName>Adressrad 1</TermName>
+    <Description>Huvudadressraden i en postadress, vanligtvis gatunamn och nummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p026">
+    <TermName>Adressrad 2</TermName>
+    <Description>En ytterligare adressrad i en postadress som kan användas för att ge
+        kompletterande detaljer till huvudraden. Vanliga användningar är sekundärt
+        husnummer i ett komplex eller en byggnad.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p027">
+    <TermName>Stad</TermName>
+    <Description>Det vanliga namnet på staden där postadressen finns. Namnet skrivs i
+        sin helhet istället för som en kod.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p028">
+    <TermName>Postnummer</TermName>
+    <Description>Identifieraren för en adressbar grupp fastigheter enligt det relevanta
+        nationella postverket, exempelvis ett ZIP-nummer eller postnummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p029">
+    <TermName>Landsdel / region</TermName>
+    <Description>Används för att ange region, län, stat, provins etc. inom ett land
+        genom text.</Description>
+</BusinessTerm>
+
+
+<BusinessTerm id="tir16-066">
+    <TermName>Säljarens partidentifierare</TermName>
+    <Description>En identifierare för säljaren.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-065">
+    <TermName>Säljarens namn</TermName>
+    <Description>Säljarens namn.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p018">
+    <TermName>Adressrad 1</TermName>
+    <Description>Den huvudsakliga adressraden i en postadress, vanligtvis gata och nummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p019">
+    <TermName>Adressrad 2</TermName>
+    <Description>En extra adressrad som kan användas för att ge ytterligare detaljer som
+        kompletterar huvudadressen, t.ex. sekundärt husnummer eller byggnadsinformation.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p020">
+    <TermName>Stad</TermName>
+    <Description>Det fullständiga namnet på staden där adressen ligger, skrivet i klartext.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-052">
+    <TermName>Artikelnamn</TermName>
+    <Description>Ett kort namn för en artikel.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p021">
+    <TermName>Postnummer</TermName>
+    <Description>Identifierare för ett adresserbart område enligt nationell poststandard, t.ex.
+        postnummer eller ZIP-kod.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p022">
+    <TermName>Landsdel / region</TermName>
+    <Description>Angivelse av region, län, stat eller provins inom ett land.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-032">
+    <TermName>Ursprungspartens identifierare</TermName>
+    <Description>Identifierare för den part som är upphov eller avsändare.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-031">
+    <TermName>Ursprungspartens namn</TermName>
+    <Description>Namnet på den part som är upphov eller avsändare.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p032">
+    <TermName>Adressrad 1</TermName>
+    <Description>Den huvudsakliga adressraden i en postadress, vanligtvis gata och nummer.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p033">
+    <TermName>Adressrad 2</TermName>
+    <Description>En extra adressrad som kan användas för att ge ytterligare detaljer som
+        kompletterar huvudadressen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p034">
+    <TermName>Stad</TermName>
+    <Description>Det fullständiga namnet på staden där adressen ligger.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p035">
+    <TermName>Postnummer</TermName>
+    <Description>Identifierare för ett adresserbart område enligt relevant nationell posttjänst.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p036">
+    <TermName>Landsdel / region</TermName>
+    <Description>Textuell angivelse av region, län, stat eller provins inom ett land.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-042">
+    <TermName>Periodens startdatum</TermName>
+    <Description>Startdatum för perioden.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-043">
+    <TermName>Periodens starttid</TermName>
+    <Description>Starttid för perioden.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-044">
+    <TermName>Periodens slutdatum</TermName>
+    <Description>Slutdatum för perioden.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-045">
+    <TermName>Periodens sluttid</TermName>
+    <Description>Sluttid för perioden.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-072">
+    <TermName>Sändningens avsändningsdatum</TermName>
+    <Description>Det faktiska eller förväntade datumet då sändningen skickades från avsändande part.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-073">
+    <TermName>Sändningens avsändningstid</TermName>
+    <Description>Den faktiska eller förväntade tiden då sändningen skickades från avsändande part.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p010">
+    <TermName>Orderidentifierare</TermName>
+    <Description>Identifierar den order som refererad orderrad tillhör.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p041">
+    <TermName>Köparens artikelidentifierare</TermName>
+    <Description>Identifierare för artikeln tilldelad av köparen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-053">
+    <TermName>Säljarens artikelidentifierare</TermName>
+    <Description>Identifierare för artikeln tilldelad av säljaren.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-054">
+    <TermName>Säljarens utökade artikelidentifierare</TermName>
+    <Description>Ett utökat artikel-ID med specifika egenskaper, t.ex. Artikel 123 = stol /
+        Artikel 123 Ext 45 = brun stol.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-055">
+    <TermName>Standardiserad artikelidentifierare</TermName>
+    <Description>Artikelidentifierare baserad på ett registrerat standardiserat system.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-056">
+    <TermName>Standardiserad utökad artikelidentifierare</TermName>
+    <Description>En utökad standardiserad identifierare med särskiljande egenskaper, t.ex. stol vs. brun stol.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p048">
+    <TermName>Artikelklassificeringskod</TermName>
+    <Description>Kod som klassificerar artikeln enligt typ eller natur, exempelvis CPV eller UNSPSC.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-057">
+    <TermName>UNDG-kod för farligt gods</TermName>
+    <Description>Kod tilldelad av FN för transport av farligt gods.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-058">
+    <TermName>Farlighetsklassidentifierare</TermName>
+    <Description>Identifiering av farlighetsklass enligt relevant regelverk, t.ex. IMDG eller ADR/RID.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p039">
+    <TermName>Egenskapsnamn</TermName>
+    <Description>Namnet på artikelns egenskap, tillräckligt beskrivande för att definiera värdet.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p042">
+    <TermName>Egenskapskod</TermName>
+    <Description>Kod för artikelns egenskap enligt ett egenskapskodsystem.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p040">
+    <TermName>Egenskapsvärde</TermName>
+    <Description>Värdet på artikelns egenskap.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p043">
+    <TermName>Egenskapens måttenhet</TermName>
+    <Description>Måttenheten för egenskapsvärdet, om relevant.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p044">
+    <TermName>Egenskapsklassificering</TermName>
+    <Description>Standardiserad och fördefinierad klassificering av artikelns egenskaper.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p057">
+    <TermName>Spårbarhetsidentifierare</TermName>
+    <Description>Identifierare för att spåra artikelns individ, t.ex. EPC för RFID.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-079">
+    <TermName>Artikelns tillverkningsdatum</TermName>
+    <Description>Tillverkningsdatum för alla artiklar i denna leveransrad.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-080">
+    <TermName>Artikelns bäst före-datum</TermName>
+    <Description>Bäst före-datum för alla artiklar i denna leveransrad.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-083">
+	<TermName>Artikelns serienummer</TermName>
+	<Description>Serienummer för artiklar som listas i avsändningsraden.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-MeasurementDimension">
+	<TermName>Måttdimension</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-061">
+	<TermName>Identifierare för hanteringsenhet</TermName>
+	<Description>Identifierar transporthanteringsenheten.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-085">
+	<TermName>Typ av hanteringsenhet</TermName>
+	<Description>Typen av förpackning som representerar hanteringsenheten, såsom låda, pall, container etc.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-062">
+	<TermName>Indikator för farligt gods i hanteringsenhet</TermName>
+	<Description>Indikerar om försändelsen innehåller farligt material.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-064">
+	<TermName>Fraktsymboler för hanteringsenhet</TermName>
+	<Description>Fritextbeskrivning av märkningar och nummer på en transportenhet eller förpackning.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p017">
+	<TermName>Adressrad 3</TermName>
+	<Description>En ytterligare adressrad i en adress som kan användas för att ge kompletterande information till huvudraden.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p008">
+	<TermName>Landskod</TermName>
+	<Description>En kod som identifierar landet. Listorna över giltiga länder registreras hos ISO 3166-1 Maintenance Agency, "Codes for the representation of names of countries and their subdivisions". Koder ska vara enligt alfa-2-representationen.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p011">
+	<TermName>Adressrad 3</TermName>
+	<Description>En ytterligare adressrad i en adress som kan användas för att ge kompletterande information till huvudraden.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p045">
+	<TermName>Landskod</TermName>
+	<Description>En kod som identifierar landet. Listorna över giltiga länder registreras hos ISO 3166-1 Maintenance Agency, "Codes for the representation of names of countries and their subdivisions". Koder ska vara enligt alfa-2-representationen.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p030">
+	<TermName>Adressrad 3</TermName>
+	<Description>En ytterligare adressrad i en adress som kan användas för att ge kompletterande information till huvudraden.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-023">
+	<TermName>Landskod</TermName>
+	<Description>En kod som identifierar landet. Listorna över giltiga länder registreras hos ISO 3166-1 Maintenance Agency, "Codes for the representation of names of countries and their subdivisions". Koder ska vara enligt alfa-2-representationen.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p023">
+	<TermName>Adressrad 3</TermName>
+	<Description>En ytterligare adressrad i en adress som kan användas för att ge kompletterande information till huvudraden.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p031">
+	<TermName>Landskod</TermName>
+	<Description>En kod som identifierar landet. Listorna över giltiga länder registreras hos ISO 3166-1 Maintenance Agency, "Codes for the representation of names of countries and their subdivisions". Koder ska vara enligt alfa-2-representationen.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p037">
+	<TermName>Adressrad 3</TermName>
+	<Description>En ytterligare adressrad i en adress som kan användas för att ge kompletterande information till huvudraden.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p024">
+	<TermName>Landskod</TermName>
+	<Description>En kod som identifierar landet. Listorna över giltiga länder registreras hos ISO 3166-1 Maintenance Agency, "Codes for the representation of names of countries and their subdivisions". Koder ska vara enligt alfa-2-representationen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p055">
+	<TermName>Transportörens partidentifierare</TermName>
+	<Description>Transportörens partidentifierare.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-076">
+	<TermName>Transportörens namn</TermName>
+	<Description>Namnet på transportören som hanterar leveransen av den avsända försändelsen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p046">
+	<TermName>Identifierare</TermName>
+	<Description>En identifierare för platsen dit varorna och tjänsterna skickas.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p003">
+	<TermName>Adressrad 1</TermName>
+	<Description>Huvudadressraden i en postadress, vanligtvis gatunamn och nummer.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p004">
+	<TermName>Adressrad 2</TermName>
+	<Description>En ytterligare adressrad i en postadress som kan användas för att ange ytterligare detaljer. Vanliga användningar är sekundärt husnummer i ett komplex eller en byggnad.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p005">
+	<TermName>Stad</TermName>
+	<Description>Det vanliga namnet på staden där postadressen finns. Namnet skrivs ut i sin helhet och inte som en kod.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p006">
+	<TermName>Postnummer</TermName>
+	<Description>Identifieraren för en adresserbar grupp av fastigheter enligt relevant nationell posttjänst, såsom ZIP-kod eller postnummer.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p007">
+	<TermName>Administrativ region</TermName>
+	<Description>Anger region, län, delstat, provins etc. inom ett land med text.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p059">
+	<TermName>Artikelinstansens egenskapsnamn</TermName>
+	<Description>Namnet på artikelinstansens egenskap. Namnet måste vara tillräckligt beskrivande för att definiera värdet.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-p060">
+	<TermName>Artikelinstansens egenskapsvärde</TermName>
+	<Description>Värdet på artikelinstansens egenskap.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-082">
+	<TermName>Artikelns batchnummer</TermName>
+	<Description>Batchnumret som gäller för alla artiklar i avsändningsraden.</Description>
+</BusinessTerm>
+<BusinessTerm id="tir16-081">
+	<TermName>Artikelns utgångsdatum</TermName>
+	<Description>Utgångsdatum för alla artiklar som listas i denna avsändningsrad.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p058 (Net volume)">
+	<TermName>Nettovikt/bruttovikt för hanteringsenhet eller nettovolym/bruttovolym för hanteringsenhet</TermName>
+	<Description>Netto- eller bruttovikt samt netto- eller bruttovolym som skickas i denna transporthanteringsenhet.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-089">
+	<TermName>Förpackningsidentifierare</TermName>
+	<Description>En identifierare för denna förpackning.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-090">
+	<TermName>Förpackningstypkod</TermName>
+	<Description>Typen av förpackning som används, såsom låda, pall, container etc.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-078">
+	<TermName>Förarinformation</TermName>
+	<Description>Identifieringsinformation om föraren av fordonet som levererar den avsända försändelsen.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p009">
+	<TermName> Förarens typ av identitetshandling</TermName>
+	<Description>Typen av dokument som används för att identifiera föraren, uttryckt i text.</Description>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-DespatchSupplierParty">
+	<TermName>Leverantörens information</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-DeliveryCustomerParty">
+	<TermName>Mottagarinformation</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-BuyerParty">
+	<TermName>Köpare</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-SellerParty">
+	<TermName>Säljare</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-OriginatorCustomerParty">
+	<TermName>Ursprunglig kundpart</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-Shipment">
+	<TermName>Försändelseinformation</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-AdditionalDocumentReference">
+	<TermName>Ytterligare dokument</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-Consignment">
+	<TermName>Sändningsinformation</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-Carrier">
+	<TermName>Transportör</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-OrderlineReference">
+	<TermName>Orderradsreferens</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-Despatch">
+	<TermName>Faktisk eller förväntad leveransperiod</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-DespatchAddress">
+	<TermName>Leveranssadress</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-DespatchLines">
+	<TermName>LEVERANSRADER</TermName>
+</BusinessTerm>
+
+<BusinessTerm id="tir16-p038">
+	<TermName>Landskod</TermName>
+	<Description>En kod som identifierar landet. Listorna över giltiga länder registreras hos ISO 3166-1 Maintenance Agency, "Codes for the representation of names of countries and their subdivisions". Koder ska vara enligt alfa-2-representationen.</Description>
+</BusinessTerm>
+
 </SemanticModel>
