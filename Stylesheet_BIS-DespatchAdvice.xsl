@@ -226,9 +226,10 @@ padding-top:1vw;
             <div class="col-6">
 
               <h2 style="margin-bottom:0px">
-                <xsl:call-template name="DocumentHeader">
-                  <xsl:with-param name="DocumentCode" select="local-name(.)"/>
-                </xsl:call-template>
+                <xsl:call-template name="LabelName">
+                      <xsl:with-param name="BT-ID" select="'tir16-header'"/>
+                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
+                    </xsl:call-template>
               </h2>
               <h3 style="margin-top:0px">
                 <xsl:call-template name="DocumentCode">

@@ -2479,5 +2479,8 @@
 	<TermName>Landskod</TermName>
 	<Description>En kod som identifierar landet. Listorna över giltiga länder registreras hos ISO 3166-1 Maintenance Agency, "Codes for the representation of names of countries and their subdivisions". Koder ska vara enligt alfa-2-representationen.</Description>
 </BusinessTerm>
+<BusinessTerm id="tir16-header">
+	<TermName>Leveransavisering</TermName>
+</BusinessTerm>
 
 </SemanticModel>

@@ -3012,6 +3012,9 @@ If remittance information is to be mapped to the End To End Identification field
 										subdivisions". Codes must be according to the alpha-2
 										representation.</Description>
 	</BusinessTerm>
+	<BusinessTerm id="tir16-header">
+	<TermName>Despatch Advice</TermName>
+</BusinessTerm>
 	
 	
 	
