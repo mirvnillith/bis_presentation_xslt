@@ -1211,6 +1211,53 @@
     </b>
     <xsl:apply-templates select="cac:DeliveryParty/cac:PostalAddress"/>
   </xsl:template>
+<xsl:template name="DespatchAddress">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-DespatchAddress'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+<br/>
+</b>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:ID">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p046'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:ID"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:StreetName">
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:StreetName"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:AdditionalStreetName">
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:AdditionalStreetName"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:CityName">
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:CityName"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:PostalZone">
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:PostalZone"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:CountrySubentity">
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cac:DespatchAddress/cbc:CountrySubentity"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cac:AddressLine">
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cac:AddressLine/cbc:Line">
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cac:DespatchAddress/cac:AddressLine/cbc:Line"/>
+<br/>
+</xsl:if>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress/cac:Country">
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cac:DespatchAddress/cac:Country/cbc:IdentificationCode"/>
+<br/>
+</xsl:if>
+</xsl:template>
   <!--Contact from here: -->
   <xsl:template match="cac:AccountingSupplierParty/cac:Party" mode="accsupcontact">
     <xsl:apply-templates select="cac:Contact"/>
@@ -1257,6 +1304,244 @@
   
   
   
+<xsl:template match="cac:AdditionalDocumentReference" mode="DespatchAdvice">
+<xsl:apply-templates select="cbc:ID"/>
+<br/>
+<xsl:if test="cbc:DocumentType">
+<xsl:apply-templates select="cbc:DocumentType"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Attachment">
+<xsl:if test="cac:Attachment/cbc:EmbeddedDocumentBinaryObject">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p051'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+<br/>
+</b>
+<xsl:apply-templates select="cac:Attachment/cbc:EmbeddedDocumentBinaryObject"/>
+ [
+<xsl:apply-templates select="cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@mimeCode"/>
+]  [
+<xsl:apply-templates select="cac:Attachment/cbc:EmbeddedDocumentBinaryObject/@filename"/>
+]
+<br/>
+</xsl:if>
+<xsl:if test="cac:Attachment/cac:ExternalReference">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p052'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+<br/>
+</b>
+<xsl:apply-templates select="cac:Attachment/cac:ExternalReference/cbc:URI"/>
+<br/>
+</xsl:if>
+</xsl:if>
+</xsl:template>
+<xsl:template match="cac:Shipment" mode="DespatchAdviceHeader">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-038'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cbc:ID"/>
+<br/>
+<xsl:if test="cbc:Information">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-039'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cbc:Information"/>
+<br/>
+</xsl:if>
+<xsl:if test="cbc:GrossWeightMeasure">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-074'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cbc:GrossWeightMeasure"/>
+ [
+<xsl:apply-templates select="cbc:GrossWeightMeasure/@unitCode"/>
+]
+<br/>
+</xsl:if>
+<xsl:if test="cbc:GrossVolumeMeasure">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-075'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cbc:GrossVolumeMeasure"/>
+ [
+<xsl:apply-templates select="cbc:GrossVolumeMeasure/@unitCode"/>
+]
+<br/>
+</xsl:if>
+<xsl:if test="cbc:TotalTransportHandlingUnitQuantity">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p002'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cbc:TotalTransportHandlingUnitQuantity"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Consignment">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-Consignment'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+</b>
+<br/>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-040'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Consignment/cbc:ID"/>
+<br/>
+<xsl:if test="cac:Consignment/cbc:Information">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-077'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Consignment/cbc:Information"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Consignment/cac:CarrierParty">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-Carrier'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+</b>
+<br/>
+<xsl:if test="cac:Consignment/cac:CarrierParty/cac:PartyIdentification">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p055'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Consignment/cac:CarrierParty/cac:PartyIdentification/cbc:ID"/>
+ [
+<xsl:apply-templates select="cac:Consignment/cac:CarrierParty/cac:PartyIdentification/cbc:ID/@schemeID"/>
+]
+<br/>
+</xsl:if>
+<xsl:if test="cac:Consignment/cac:CarrierParty/cac:PartyName">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-076'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Consignment/cac:CarrierParty/cac:PartyName/cbc:Name"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Consignment/cac:CarrierParty/cac:Person/cac:IdentityDocumentReference">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-078'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Consignment/cac:CarrierParty/cac:Person/cac:IdentityDocumentReference/cbc:ID"/>
+<br/>
+<xsl:if test="cac:Consignment/cac:CarrierParty/cac:Person/cac:IdentityDocumentReference/cbc:DocumentType">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p009'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Consignment/cac:CarrierParty/cac:Person/cac:IdentityDocumentReference/cbc:DocumentType"/>
+</xsl:if>
+</xsl:if>
+</xsl:if>
+<br/>
+</xsl:if>
+<xsl:if test="cac:ShipmentStage">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p056'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:ShimpentStage/cbc:TransportModeCode"/>
+</xsl:if>
+<xsl:if test="cac:Delivery">
+<xsl:if test="cac:Delivery/cbc:TrackingID">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-041'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Delivery/cbc:TrackingID"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:EstimatedDeliveryPeriod">
+<xsl:if test="cac:Delivery/cac:EstimatedDeliveryPeriod/cbc:StartDate">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-042'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Delivery/cac:EstimatedDeliveryPeriod/cbc:StartDate"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:EstimatedDeliveryPeriod/cbc:StartTime">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-043'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Delivery/cac:EstimatedDeliveryPeriod/cbc:StartTime"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:EstimatedDeliveryPeriod/cbc:EndDate">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-044'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Delivery/cac:EstimatedDeliveryPeriod/cbc:EndDate"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:EstimatedDeliveryPeriod/cbc:EndTime">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-045'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Delivery/cac:EstimatedDeliveryPeriod/cbc:EndTime"/>
+<br/>
+</xsl:if>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:DeliveryParty">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'Order_DeliveryParty'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:call-template name="DeliveryParty"/>
+<br/>
+</xsl:if>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-Despatch'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+<br/>
+</b>
+<xsl:if test="cac:Delivery/cac:Despatch/cbc:ActualDespatchDate">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-072'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cbc:ActualDespatchDate"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cbc:ActualDespatchTime">
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-073'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cac:Delivery/cac:Despatch/cbc:ActualDespatchTime"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Delivery/cac:Despatch/cac:DespatchAddress">
+<xsl:call-template name="DespatchAddress"/>
+<br/>
+</xsl:if>
+</xsl:if>
+</xsl:template>			   
    <!-- Catalogue line -->
   <xsl:template match="cac:CatalogueLine" mode="catalogue">
     <tr>
@@ -1666,6 +1951,461 @@
     </xsl:if>
     <br/>
   </xsl:template>
+						<!--  Despatch line  -->
+<xsl:template match="cac:DespatchLine" mode="despatch">
+<tr>
+<td>
+<!--  Line ID -DONE -->
+<xsl:apply-templates select="cbc:ID"/>
+</td>
+<td>
+<!--  Order line Reference -DONE -->
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-051'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:OrderLineReference/cbc:LineID"/>
+<br/>
+<xsl:if test="cac:OrderLineReference/cbc:SalesOrderLineID">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p047'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:OrderLineReference/cbc:SalesOrderLineID"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:OrderLineReference/cac:OrderReference">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p010'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:OrderLineReference/cac:OrderReference/cbc:ID"/>
+<br/>
+</xsl:if>
+</td>
+<td>
+<!--  Item  -->
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-052'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:Item/cbc:Name"/>
+<br/>
+<xsl:if test="cac:Item/cac:BuyersItemIdentification">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p041'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:Item/cac:BuyersItemIdentification/cbc:ID"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Item/cac:SellersItemIdentification">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-053'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:Item/cac:SellersItemIdentification/cbc:ID"/>
+<br/>
+<xsl:if test="cac:Item/cac:SellersItemIdentification/cbc:ExtendedID">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-054'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:Item/cac:SellersItemIdentification/cbc:ExtendedID"/>
+<br/>
+</xsl:if>
+</xsl:if>
+<xsl:if test="cac:Item/cac:StandardItemIdentification">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-055'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:Item/cac:StandardItemIdentification/cbc:ID"/>
+(
+<xsl:apply-templates select="cac:Item/cac:StandardItemIdentification/cbc:ID/@schemeID"/>
+)
+<br/>
+<xsl:if test="cac:Item/cac:StandardItemIdentification/cbc:ExtendedID">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-056'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:Item/cac:StandardItemIdentification/cbc:ExtendedID"/>
+<br/>
+</xsl:if>
+</xsl:if>
+<xsl:if test="cac:Item/cac:CommodityClassification">
+<xsl:apply-templates select="cac:Item/cac:CommodityClassification" mode="DespatchLineItem"/>
+</xsl:if>
+<xsl:if test="cac:Item/cac:HazardousItem">
+<xsl:apply-templates select="cac:Item/cac:HazardousItem" mode="DespatchLineItem"/>
+</xsl:if>
+<xsl:if test="cac:Item/cac:AdditionalItemProperty">
+<xsl:apply-templates select="cac:Item/cac:AdditionalItemProperty" mode="DespatchLineItem"/>
+</xsl:if>
+<xsl:if test="cac:Item/cac:ItemInstance">
+<xsl:apply-templates select="cac:Item/cac:ItemInstance" mode="DespatchLineItem"/>
+</xsl:if>
+</td>
+<td>
+<!--  Quantity -DONE -->
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-048'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+</b>
+<br/>
+<xsl:apply-templates select="cbc:DeliveredQuantity"/>
+(
+<xsl:apply-templates select="cbc:DeliveredQuantity/@unitCode"/>
+)
+<xsl:if test="cbc:OutstandingQuantity">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-049'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+</b>
+<br/>
+<xsl:apply-templates select="cbc:OutstandingQuantity"/>
+(
+<xsl:apply-templates select="cbc:OutstandingQuantity/@unitCode"/>
+)
+<br/>
+</xsl:if>
+<xsl:if test="cbc:OutstandingReason">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-050'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+</b>
+<br/>
+<xsl:apply-templates select="cbc:OutstandingReason"/>
+<br/>
+</xsl:if>
+</td>
+<td>
+<!--  Note -DONE   -->
+<xsl:if test="cbc:Note">
+<xsl:apply-templates select="cbc:Note"/>
+</xsl:if>
+</td>
+<td>
+<!--  Shipment  -->
+<xsl:if test="cac:DocumentReference">
+<xsl:apply-templates select="cac:DocumentReference" mode="DespatchLine"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:Shipment">
+<xsl:if test="cac:Shipment/cac:TransportHandlingUnit">
+<xsl:apply-templates select="cac:Shipment/cac:TransportHandlingUnit" mode="DespatchLineShipment"/>
+</xsl:if>
+</xsl:if>
+</td>
+</tr>
+</xsl:template>
+<xsl:template match="cac:DocumentReference" mode="DespatchLine">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p053'"/>
+<xsl:with-param name="Colon-Suffix" select="'false'"/>
+</xsl:call-template>
+<br/>
+</b>
+<xsl:apply-templates select="cbc:ID"/>
+<br/>
+<xsl:if test="cbc:DocumentType">
+<xsl:apply-templates select="cbc:DocumentType"/>
+<br/>
+</xsl:if>
+</xsl:template>
+<xsl:template match="cac:Item/cac:CommodityClassification" mode="DespatchLineItem">
+<xsl:if test="cbc:ItemClassificationCode">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p048'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:ItemClassificationCode"/>
+(
+<xsl:apply-templates select="cbc:ItemClassificationCode/@listID"/>
+)
+<xsl:if test="cbc:ItemClassificationCode/@listVersionID">
+(
+<xsl:apply-templates select="cbc:ItemClassificationCode/@listVersionID"/>
+)
+</xsl:if>
+<xsl:if test="cbc:ItemClassificationCode/@name">
+(
+<xsl:apply-templates select="cbc:ItemClassificationCode/@name"/>
+)
+</xsl:if>
+</xsl:if>
+<br/>
+</xsl:template>
+<xsl:template match="cac:Item/cac:HazardousItem" mode="DespatchLineItem">
+<xsl:if test="cbc:UNDGCode">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-057'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:UNDGCode"/>
+<br/>
+</xsl:if>
+<xsl:if test="cbc:HazardClassID">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-058'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:HazardClassID"/>
+<br/>
+</xsl:if>
+</xsl:template>
+<xsl:template match="cac:Item/cac:AdditionalItemProperty" mode="DespatchLineItem">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir19-additionalitemproperty'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:if test="cbc:ID">
+<xsl:apply-templates select="cbc:ID"/>
+<xsl:if test="cbc:ID/@schemeDataURI">
+(
+<xsl:apply-templates select="cbc:ID/@schemeDataURI"/>
+)
+</xsl:if>
+<xsl:if test="cbc:ID/@schemeID">
+(
+<xsl:apply-templates select="cbc:ID/@schemeID"/>
+)
+</xsl:if>
+<xsl:if test="cbc:ID/@schemeVersionID">
+(
+<xsl:apply-templates select="cbc:ID/@schemeVersionID"/>
+)
+</xsl:if>
+<br/>
+</xsl:if>
+<xsl:apply-templates select="cbc:Name"/>
+<xsl:if test="cbc:NameCode">
+(
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir19-p039'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cbc:NameCode"/>
+)
+</xsl:if>
+=
+<xsl:apply-templates select="cbc:Value"/>
+<xsl:if test="cbc:ValueQuantity">
+(
+<xsl:apply-templates select="cbc:ValueQuantity"/>
+ 
+<xsl:apply-templates select="cbc:ValueQuantity/@unitCode"/>
+)
+</xsl:if>
+<xsl:if test="cbc:ValueQualifier">
+<small>
+ [
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir19-103'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+<xsl:apply-templates select="cbc:ValueQualifier"/>
+]
+</small>
+</xsl:if>
+<br/>
+</xsl:template>
+<xsl:template match="cac:Item/cac:ItemInstance" mode="DespatchLineItem">
+<xsl:if test="cbc:ProductTraceID">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p057'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:ProductTraceID"/>
+<xsl:if test="cbc:ProductTraceID/@schemeID">
+(
+<xsl:apply-templates select="cbc:ProductTraceID/@schemeID"/>
+)
+</xsl:if>
+<br/>
+</xsl:if>
+<xsl:if test="cbc:ManufactureDate">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-079'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:ManufactureDate"/>
+<br/>
+</xsl:if>
+<xsl:if test="cbc:BestBeforeDate">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-080'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:BestBeforeDate"/>
+<br/>
+</xsl:if>
+<xsl:if test="cbc:SerialID">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-083'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:SerialID"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:LotIdentification">
+<xsl:if test="cac:LotIdentification/cbc:LotNumberID">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-082'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:LotIdentification/cbc:LotNumberID"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:LotIdentification/cbc:ExpiryDate">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-081'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:LotIdentification/cbc:ExpiryDate"/>
+<br/>
+</xsl:if>
+</xsl:if>
+</xsl:template>
+<xsl:template match="cac:Shipment/cac:TransportHandlingUnit" mode="DespatchLineShipment">
+<xsl:if test="cbc:ID">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-061'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:ID"/>
+<xsl:if test="cbc:ID/@schemeID">
+(
+<xsl:apply-templates select="cbc:ID/@schemeID"/>
+)
+</xsl:if>
+<br/>
+</xsl:if>
+<xsl:if test="cbc:TransportHandlingUnitTypeCode">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-085'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:TransportHandlingUnitTypeCode"/>
+<br/>
+</xsl:if>
+<xsl:if test="cbc:HazardousRiskIndicator">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-062'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:HazardousRiskIndicator"/>
+<br/>
+</xsl:if>
+<xsl:if test="cbc:ShippingMarks">
+<xsl:apply-templates select="cbc:ShippingMarks" mode="DespatchLineShipment"/>
+</xsl:if>
+<xsl:if test="cac:MeasurementDimension">
+<xsl:apply-templates select="cac:MeasurementDimension" mode="DespatchLineShipment"/>
+</xsl:if>
+<xsl:if test="cac:Package">
+<xsl:apply-templates select="cac:Package" mode="DespatchLineShipment"/>
+</xsl:if>
+</xsl:template>
+<xsl:template match="cbc:ShippingMarks" mode="DespatchLineShipment">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-064'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:ShippingMarks"/>
+<br/>
+</xsl:template>
+<xsl:template match="cac:MeasurementDimension" mode="DespatchLineShipment">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-MeasurementDimension'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:AttributeID"/>
+<xsl:if test="cbc:Measure">
+=
+<xsl:apply-templates select="cbc:Measure"/>
+(
+<xsl:apply-templates select="cbc:Measure/@unitCode"/>
+)
+</xsl:if>
+<br/>
+</xsl:template>
+<xsl:template match="cac:Package" mode="DespatchLineShipment">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-089'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:ID"/>
+<br/>
+<xsl:if test="cbc:PackagingTypeCode">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-090'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cbc:PackagingTypeCode"/>
+<br/>
+</xsl:if>
+</xsl:template>						   
 	<xsl:template match="cac:AccessoryRelatedItem">
 	  <xsl:if test="cbc:ID">
             <b>
