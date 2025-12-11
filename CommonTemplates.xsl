@@ -7,9 +7,8 @@
 		title= PEPPOL_BIS 3CommonTemplates.xml	
 		publisher= "SFTI tekniska kansli"
 		Creator= SFTI/SL
-		created= 2014-02-12
 		conformsTo= UBL-Invoice-2.1.xsd
-		description= "Common templates for displaying PEPPOL BIS 3, version 2.0"
+		description= "Common templates for displaying PEPPOL BIS 3, version 1.1"
 		
 		Derived from work by OIOUBL, Denmark. For more information, see www.sfti.se or email tekniskt.kansli@skl.se
 		
@@ -3213,6 +3212,9 @@
           <xsl:if test="cac:Item/cac:ItemInstance">
             <xsl:apply-templates select="cac:Item/cac:ItemInstance"/>
           </xsl:if>
+          <xsl:if test="cac:Delivery/cac:DeliveryLocation">
+           <xsl:apply-templates select="cac:Delivery/cac:DeliveryLocation" mode="Orderlineaddress"/>
+          </xsl:if>
         </small>
       </td>
       <td align="left">
@@ -3538,6 +3540,41 @@
     </xsl:call-template>
     <xsl:apply-templates select="cac:LotIdentification/cbc:LotNumberID"/>
     <br/>
+  </xsl:template>
+  <xsl:template match="cac:Delivery/cac:DeliveryLocation" mode="Orderlineaddress">
+  <b>
+   <xsl:call-template name="LabelName">
+   
+      <xsl:with-param name="BT-ID" select="'tir01-OrderlineAddress'"/>
+      <xsl:with-param name="Colon-Suffix" select="'false'"/>
+    
+    </xsl:call-template>
+    </b>
+      <br/>
+  <xsl:if test="cbc:Name">
+	  <xsl:apply-templates select="cbc:Name"/><br/>
+  </xsl:if>
+    <xsl:if test="cac:Address/cbc:StreetName">
+	  <xsl:apply-templates select="cac:Address/cbc:StreetName"/><br/>
+  </xsl:if>
+    <xsl:if test="cac:Address/cbc:AdditionalStreetName">
+	  <xsl:apply-templates select="cac:Address/cbc:AdditionalStreetName"/><br/>
+  </xsl:if>
+     <xsl:if test="cac:Address/cbc:CityName">
+	  <xsl:apply-templates select="cac:Address/cbc:CityName"/><br/>
+  </xsl:if>
+       <xsl:if test="cac:Address/cbc:PostalZone">
+	  <xsl:apply-templates select="cac:Address/cbc:PostalZone"/><br/>
+  </xsl:if>
+   <xsl:if test="cac:Address/cbc:CountrySubentity">
+	  <xsl:apply-templates select="cac:Address/cbc:CountrySubentity"/><br/>
+  </xsl:if>
+     <xsl:if test="cac:Address/cac:AddressLine/cbc:Line">
+	  <xsl:apply-templates select="cac:Address/cac:AddressLine/cbc:Line"/><br/>
+  </xsl:if>
+  <xsl:if test="cac:Address/cac:Country/cbc:IdentificationCode">
+	  <xsl:apply-templates select="cac:Address/cac:Country/cbc:IdentificationCode"/><br/>
+  </xsl:if>
   </xsl:template>
   <xsl:template match="cac:AdditionalItemProperty">
     <b>

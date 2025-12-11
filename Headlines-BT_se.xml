@@ -1177,6 +1177,10 @@
 	<BusinessTerm id="tir01-p054">
 		<TermName>Önskad avsändningstid</TermName>
 	</BusinessTerm>
+		<BusinessTerm id="tir01-OrderlineAddress">
+		<TermName>Leveransadress på radnivå</TermName>
+	</BusinessTerm>
+	
 	<BusinessTerm id="tir76-204">
 		<TermName>Svar förtydligande</TermName>
 		<DisplayName>Svar</DisplayName>

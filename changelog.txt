@@ -1,4 +1,19 @@
-﻿Change-log Stylesheet version 1.1.1
+﻿Change-log Stylesheet version 1.1.2
+-Added support for Dispatch Message
+-Added functionality for displaying allowance charge reason code if no reason is given
+-corrected a bug where currency decimal values under 1 without a leading 0 got rounded to the closest integer.
+-Aligned with Peppol May 2025 and November 2025 release
+	-Added support for requested despatch date and time in order
+	-Added support for new values in Item CertificateTypeCode in Catalogue
+	-Added support for aditional item properties on item Instance in Despatch Advice
+	-Added support for  attribute listVersionID on the AdditionalItemProperty NameCode element in Catalogue
+	-Added support for business terms and elements for the delivery address on line level in Order.
+	-Added support for new code values according to Peppol release notes.
+	-Removed separate change-logs for the different messages - everything is listed here. 
+  
+
+
+Change-log Stylesheet version 1.1.1
 -Aligned with Peppol Nov 2024 Release.
 	-Added support for new Vatex codes.
 	-Added support for optional element "ID" in AdditionalitemPoperty

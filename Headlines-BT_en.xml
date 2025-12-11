@@ -1736,7 +1736,9 @@ If remittance information is to be mapped to the End To End Identification field
 	<BusinessTerm id="tir01-p054">
 		<TermName>Requested despatch time</TermName>
 	</BusinessTerm>
-	
+	<BusinessTerm id="tir01-OrderlineAddress">
+		<TermName>Order Line Delivery Location</TermName>
+	</BusinessTerm>
 	
 	
 	
