@@ -231,11 +231,7 @@ padding-top:1vw;
                       <xsl:with-param name="Colon-Suffix" select="'false'"/>
                     </xsl:call-template>
               </h2>
-              <h3 style="margin-top:0px">
-                <xsl:call-template name="DocumentCode">
-                  <xsl:with-param name="DCode" select="cbc:ID"/>
-                </xsl:call-template>
-              </h3>
+
               <h1>
                     <xsl:value-of select="cac:DespatchSupplierParty/cac:Party/cac:PartyLegalEntity/cbc:RegistrationName"/>
               </h1>
@@ -297,18 +293,7 @@ padding-top:1vw;
                   <xsl:value-of select="cbc:ID"/>
                   <br/>
                 </p>
-                <p align="left">
-                  <b>
-                    <xsl:call-template name="LabelName">
-                      <xsl:with-param name="BT-ID" select="'tir19-005'"/>
-                      <xsl:with-param name="Colon-Suffix" select="'false'"/>
-                    </xsl:call-template>
-                  </b>
-                  <br/>
-                  <!-- Inserting Despatch Note  -->
-                  <xsl:value-of select="cbc:Note"/>
-                  <br/>
-                </p>
+                
                  <xsl:if test="cac:OrderReference/cbc:ID">
                   <p align="left">
                     <b>

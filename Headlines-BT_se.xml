@@ -1817,6 +1817,7 @@
     <BusinessTerm id="tir16-038">
     <TermName>Sändningsidentifierare</TermName>
     <Description>Identifierar en sändning.</Description>
+    <DisplayName>ID</DisplayName>
 </BusinessTerm>
 
 <BusinessTerm id="tir16-039">
@@ -1824,18 +1825,21 @@
     <Description>Fritext som gäller en sändning. Detta element kan innehålla noteringar
         eller annan liknande information som inte uttryckligen finns i en annan
         struktur.</Description>
+        <DisplayName>Beskrivning</DisplayName>
 </BusinessTerm>
 
 <BusinessTerm id="tir16-074">
     <TermName>Sändningens bruttovikt</TermName>
     <Description>Den totala vikten av sändningen inklusive emballage, som skickad
         från avsändaren.</Description>
+	<DisplayName>Bruttovikt</DisplayName>        
 </BusinessTerm>
 
 <BusinessTerm id="tir16-075">
     <TermName>Sändningens bruttovolym</TermName>
     <Description>Den totala volymen av sändningen inklusive emballage, som skickad
         från avsändaren.</Description>
+	<DisplayName>Bruttovolym</DisplayName>                
 </BusinessTerm>
 
 <BusinessTerm id="tir16-p002">
@@ -2235,21 +2239,25 @@
 <BusinessTerm id="tir16-055">
     <TermName>Standardiserad artikelidentifierare</TermName>
     <Description>Artikelidentifierare baserad på ett registrerat standardiserat system.</Description>
+   	<DisplayName>GTIN</DisplayName>        
 </BusinessTerm>
 
 <BusinessTerm id="tir16-056">
     <TermName>Standardiserad utökad artikelidentifierare</TermName>
     <Description>En utökad standardiserad identifierare med särskiljande egenskaper, t.ex. stol vs. brun stol.</Description>
+   	<DisplayName>Utökad egenskap</DisplayName>        
 </BusinessTerm>
 
 <BusinessTerm id="tir16-p048">
     <TermName>Artikelklassificeringskod</TermName>
     <Description>Kod som klassificerar artikeln enligt typ eller natur, exempelvis CPV eller UNSPSC.</Description>
+   	<DisplayName>Klassificeringskod</DisplayName>        
 </BusinessTerm>
 
 <BusinessTerm id="tir16-057">
     <TermName>UNDG-kod för farligt gods</TermName>
     <Description>Kod tilldelad av FN för transport av farligt gods.</Description>
+   	<DisplayName>UNDG (farligt gods)</DisplayName>        
 </BusinessTerm>
 
 <BusinessTerm id="tir16-058">
@@ -2290,16 +2298,19 @@
 <BusinessTerm id="tir16-079">
     <TermName>Artikelns tillverkningsdatum</TermName>
     <Description>Tillverkningsdatum för alla artiklar i denna leveransrad.</Description>
+	<DisplayName>Tillverkningsdatum</DisplayName>            
 </BusinessTerm>
 
 <BusinessTerm id="tir16-080">
     <TermName>Artikelns bäst före-datum</TermName>
     <Description>Bäst före-datum för alla artiklar i denna leveransrad.</Description>
+  	<DisplayName>Bäst-före datum</DisplayName>        
 </BusinessTerm>
 
 <BusinessTerm id="tir16-083">
 	<TermName>Artikelns serienummer</TermName>
 	<Description>Serienummer för artiklar som listas i avsändningsraden.</Description>
+	<DisplayName>Serienummer</DisplayName>        
 </BusinessTerm>
 <BusinessTerm id="tir16-MeasurementDimension">
 	<TermName>Måttdimension</TermName>
@@ -2366,10 +2377,12 @@
 <BusinessTerm id="tir16-p055">
 	<TermName>Transportörens partidentifierare</TermName>
 	<Description>Transportörens partidentifierare.</Description>
+	<DisplayName>PartsID</DisplayName>        
 </BusinessTerm>
 <BusinessTerm id="tir16-076">
 	<TermName>Transportörens namn</TermName>
 	<Description>Namnet på transportören som hanterar leveransen av den avsända försändelsen.</Description>
+	<DisplayName>Namn</DisplayName>        	
 </BusinessTerm>
 
 <BusinessTerm id="tir16-p046">
@@ -2400,18 +2413,22 @@
 <BusinessTerm id="tir16-p059">
 	<TermName>Artikelinstansens egenskapsnamn</TermName>
 	<Description>Namnet på artikelinstansens egenskap. Namnet måste vara tillräckligt beskrivande för att definiera värdet.</Description>
+	<DisplayName>Namn</DisplayName>        
 </BusinessTerm>
 <BusinessTerm id="tir16-p060">
 	<TermName>Artikelinstansens egenskapsvärde</TermName>
 	<Description>Värdet på artikelinstansens egenskap.</Description>
+	<DisplayName>Värde</DisplayName>        
 </BusinessTerm>
 <BusinessTerm id="tir16-082">
 	<TermName>Artikelns batchnummer</TermName>
 	<Description>Batchnumret som gäller för alla artiklar i avsändningsraden.</Description>
+	<DisplayName>BatchID</DisplayName>        
 </BusinessTerm>
 <BusinessTerm id="tir16-081">
 	<TermName>Artikelns utgångsdatum</TermName>
 	<Description>Utgångsdatum för alla artiklar som listas i denna avsändningsrad.</Description>
+		<DisplayName>Utgångsdatum</DisplayName>        
 </BusinessTerm>
 
 <BusinessTerm id="tir16-p058 (Net volume)">
