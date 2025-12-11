@@ -1933,7 +1933,13 @@
         <xsl:with-param name="BT-ID" select="'tir19-p039'"/>
         <xsl:with-param name="Colon-Suffix" select="'true'"/>
       </xsl:call-template>
-      <xsl:apply-templates select="cbc:NameCode"/>)
+      <xsl:apply-templates select="cbc:NameCode"/>
+      <xsl:if test="cbc:NameCode/@listID">
+			  (<xsl:apply-templates select="cbc:NameCode/@listID"/>)
+			</xsl:if>
+			<xsl:if test="cbc:NameCode/@listID">
+			  (<xsl:apply-templates select="cbc:NameCode/@listversionID"/>)
+			</xsl:if>)
 		</xsl:if>
 		= <xsl:apply-templates select="cbc:Value"/>
     <xsl:if test="cbc:ValueQuantity">
@@ -2288,6 +2294,24 @@
 </xsl:call-template>
 </b>
 <xsl:apply-templates select="cbc:SerialID"/>
+<br/>
+</xsl:if>
+<xsl:if test="cac:AdditionalItemProperty">
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p059'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:AdditionalItemProperty/cbc:Name"/>
+<br/>
+<b>
+<xsl:call-template name="LabelName">
+<xsl:with-param name="BT-ID" select="'tir16-p060'"/>
+<xsl:with-param name="Colon-Suffix" select="'true'"/>
+</xsl:call-template>
+</b>
+<xsl:apply-templates select="cac:AdditionalItemProperty/cbc:Value"/>
 <br/>
 </xsl:if>
 <xsl:if test="cac:LotIdentification">
@@ -2919,6 +2943,14 @@
               </xsl:call-template>
             </b>
             <xsl:apply-templates select="cbc:ID"/>
+            <br/>
+             <b>
+              <xsl:call-template name="LabelName">
+                <xsl:with-param name="BT-ID" select="'tir19-certificatetypecode'"/>
+                <xsl:with-param name="Colon-Suffix" select="'true'"/>
+              </xsl:call-template>
+            </b>
+            <xsl:apply-templates select="cbc:CertificateTypeCode"/>
             <br/>
             <b>
               <xsl:call-template name="LabelName">

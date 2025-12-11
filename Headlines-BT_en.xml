@@ -1727,6 +1727,19 @@ If remittance information is to be mapped to the End To End Identification field
 		<TermName>Item lot identifier</TermName>
 		<DisplayName>Lot ID</DisplayName>
 	</BusinessTerm>
+	<BusinessTerm id="tir01-RequestedDespatchPeriod">
+		<TermName>Requested despatch period</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir01-tir01-p053">
+		<TermName>Requested despatch date</TermName>	
+	</BusinessTerm>
+	<BusinessTerm id="tir01-p054">
+		<TermName>Requested despatch time</TermName>
+	</BusinessTerm>
+	
+	
+	
+	
 	<BusinessTerm id="tir76-204">
 		<TermName>Response clarification</TermName>
 		<DisplayName>Response</DisplayName>
@@ -2287,6 +2300,10 @@ If remittance information is to be mapped to the End To End Identification field
 	<BusinessTerm id="tir19-additionalitempropertyid">
 		<TermName>Additional Item Property ID</TermName>
 	</BusinessTerm>
+		<BusinessTerm id="	tir19-certificatetypecode">
+		<TermName>Certificate Type Code</TermName>
+	</BusinessTerm>
+
 	
 	<!--DespatchAdvice-->
 	<BusinessTerm id="tir16-002">

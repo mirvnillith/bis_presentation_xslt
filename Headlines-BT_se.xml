@@ -1168,6 +1168,15 @@
 		<TermName>Artikel partinummer identifiering</TermName>
 		<DisplayName>Lottnummer-ID</DisplayName>
 	</BusinessTerm>
+		<BusinessTerm id="tir01-RequestedDespatchPeriod">
+		<TermName>Önskad avsändningsperiod</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir01-p053">
+		<TermName>Önskat avsändningsdatum</TermName>	
+	</BusinessTerm>
+	<BusinessTerm id="tir01-p054">
+		<TermName>Önskad avsändningstid</TermName>
+	</BusinessTerm>
 	<BusinessTerm id="tir76-204">
 		<TermName>Svar förtydligande</TermName>
 		<DisplayName>Svar</DisplayName>
@@ -1739,6 +1748,9 @@
 	</BusinessTerm>
 		<BusinessTerm id="tir19-additionalitempropertyid">
 		<TermName>Egenskap/Attribut ID</TermName>
+	</BusinessTerm>
+		<BusinessTerm id="	tir19-certificatetypecode">
+		<TermName>Certifikatets typkod</TermName>
 	</BusinessTerm>
 
 
