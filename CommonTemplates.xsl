@@ -79,33 +79,51 @@
   <!--A function to display currencies with spaces as thousand delimiter-->
   <xsl:template name="Currency">
     <xsl:param name="currencyvalue"/>
-    <xsl:variable name="integers" select="substring-before($currencyvalue, '.')"/>
+    <xsl:variable name="valueToTransform">
+		<xsl:choose>
+				<xsl:when test="contains($currencyvalue, '.')">
+					<xsl:choose>
+						<xsl:when test="substring-before($currencyvalue, '.')=''">
+							 <xsl:value-of select="concat('0', $currencyvalue)"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="$currencyvalue"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$currencyvalue"/>
+				</xsl:otherwise>
+		</xsl:choose>  
+	</xsl:variable>
+    <xsl:variable name="integers" select="substring-before($valueToTransform, '.')"/>
     <xsl:choose>
       <xsl:when test="$integers != ''">
-        <xsl:variable name="decimals" select="substring-after($currencyvalue, '.')"/>
-        <xsl:variable name="transformedIntegers" select="translate(format-number(number($integers), '#,###'), ',', ' ' )"/>
+        <xsl:variable name="decimals" select="substring-after($valueToTransform, '.')"/>
+        <xsl:variable name="transformedIntegers" select="translate(format-number(number($integers), '#,###'), ',', '&#160;' )"/>
         <xsl:choose>
           <xsl:when test="$transformedIntegers !='NaN'">
             <xsl:value-of select="concat($transformedIntegers,'.', $decimals)"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="$currencyvalue"/>
+            <xsl:value-of select="$valueToTransform"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:variable name="transformedIntegers" select="translate(format-number($currencyvalue, '#,###'), ',', ' ' )"/>
+        <xsl:variable name="transformedIntegers" select="translate(format-number($valueToTransform, '#,###'), ',', '&#160;' )"/>
         <xsl:choose>
           <xsl:when test="$transformedIntegers !='NaN'">
             <xsl:value-of select="$transformedIntegers"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="$currencyvalue"/>
+            <xsl:value-of select="$valueToTransform"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  
   <xsl:template name="getGenericCode">
     <xsl:param name="documentName"/>
     <xsl:param name="documentName_en"/>
