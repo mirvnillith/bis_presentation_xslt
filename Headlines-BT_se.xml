@@ -1843,7 +1843,7 @@
 </BusinessTerm>
 
 <BusinessTerm id="tir16-p002">
-    <TermName>Totalt antal transporthanteringsenheter</TermName>
+    <TermName>Totalt antal kolli</TermName>
 </BusinessTerm>
 
 <BusinessTerm id="tir16-046">
@@ -2317,19 +2317,19 @@
 </BusinessTerm>
 
 <BusinessTerm id="tir16-061">
-	<TermName>Identifierare för hanteringsenhet</TermName>
-	<Description>Identifierar transporthanteringsenheten.</Description>
+	<TermName>Kolli-ID</TermName>
+	<Description>Identifierar kollit.</Description>
 </BusinessTerm>
 <BusinessTerm id="tir16-085">
-	<TermName>Typ av hanteringsenhet</TermName>
-	<Description>Typen av förpackning som representerar hanteringsenheten, såsom låda, pall, container etc.</Description>
+	<TermName>Typ av kolli</TermName>
+	<Description>Typen av förpackning som representerar kollit, såsom låda, pall, container etc.</Description>
 </BusinessTerm>
 <BusinessTerm id="tir16-062">
-	<TermName>Indikator för farligt gods i hanteringsenhet</TermName>
+	<TermName>Indikator för farligt gods i kolli</TermName>
 	<Description>Indikerar om försändelsen innehåller farligt material.</Description>
 </BusinessTerm>
 <BusinessTerm id="tir16-064">
-	<TermName>Fraktsymboler för hanteringsenhet</TermName>
+	<TermName>Fraktsymboler för kolli</TermName>
 	<Description>Fritextbeskrivning av märkningar och nummer på en transportenhet eller förpackning.</Description>
 </BusinessTerm>
 
@@ -2432,8 +2432,8 @@
 </BusinessTerm>
 
 <BusinessTerm id="tir16-p058 (Net volume)">
-	<TermName>Nettovikt/bruttovikt för hanteringsenhet eller nettovolym/bruttovolym för hanteringsenhet</TermName>
-	<Description>Netto- eller bruttovikt samt netto- eller bruttovolym som skickas i denna transporthanteringsenhet.</Description>
+	<TermName>Nettovikt/bruttovikt för kolli eller nettovolym/bruttovolym för kolli</TermName>
+	<Description>Netto- eller bruttovikt samt netto- eller bruttovolym som skickas i detta kolli.</Description>
 </BusinessTerm>
 
 <BusinessTerm id="tir16-089">
