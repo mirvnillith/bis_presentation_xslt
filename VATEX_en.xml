@@ -502,5 +502,229 @@
 				<SimpleValue>Intra-Community acquisition of collectors items and antiques</SimpleValue>
 			</Value>
 		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-FRANCHISE</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>France domestic VAT franchise in base</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CNWVAT</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>France domestic Credit Notes without VAT, due to supplier forfeit of VAT for discount</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-EU-153</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on article 153 of Council Directive 2006/112/EC</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261-1</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 1 of article 261 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261-2</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 2 of article 261 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261-3</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 3 of article 261 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261-4</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 4 of article 261 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261-5</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 5 of article 261 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261-7</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 7 of article 261 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261-8</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 8 of article 261 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261A</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on article 261 A of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261B</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on article 261 B of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261C-1</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 1° of article 261 C of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261C-2</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 2° of article 261 C of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261C-3</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 3° of article 261 C of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261D-1</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 1° of article 261 D of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261D-1BIS</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 1°bis of article 261 D of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261D-2</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 2° of article 261 D of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261D-3</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 3° of article 261 D of the Code Général des Impôts (CGI ; General tax code) Exonération de TVA - Article 261 D-3° du Code Général des Impôts</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261D-4</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 4° of article 261 D of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261E-1</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 1° of article 261 E of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI261E-2</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 2° of article 261 E of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI277A</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on article 277 A of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI275</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on article 275 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-298SEXDECIESA</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on article 298 sexdecies A of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-CGI295</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on article 295 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-FR-AE</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on 2 of article 283 of the Code Général des Impôts (CGI ; General tax code)</SimpleValue>
+			</Value>
+		</Row>
+		<Row>
+			<Value ColumnRef="code">
+				<SimpleValue>VATEX-EU-135-1</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Exempt based on article 135, section 1 of Council Directive 2006/112/EC</SimpleValue>
+			</Value>
+		</Row>
 	</SimpleCodeList>
 </CodeList>

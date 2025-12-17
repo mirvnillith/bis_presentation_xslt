@@ -1,16 +1,19 @@
 <!-- main.xsl -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
                 xmlns:inv="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                xmlns:cre="urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2"
                 xmlns:cat="urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2"
                 xmlns:ord="urn:oasis:names:specification:ubl:schema:xsd:Order-2"
                 xmlns:ordr="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2"
-                exclude-result-prefixes="inv cat ord ordr">
+                xmlns:desp="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
+                exclude-result-prefixes="inv cre cat ord ordr desp">
 
     <!-- Import the individual stylesheets -->
     <xsl:import href="Stylesheet_BIS-BILLING-3_Invoice+CreditNote.xsl"/>
     <xsl:import href="Stylesheet_BIS-Catalogue.xsl"/>
     <xsl:import href="Stylesheet_BIS-Order.xsl"/>
     <xsl:import href="Stylesheet_BIS-OrderResponse.xsl"/>
+    <xsl:import href="Stylesheet_BIS-DespatchAdvice.xsl"/>
 
     <!-- General template that matches any document -->
     <xsl:template match="/">
@@ -18,6 +21,9 @@
         <xsl:choose>
             <xsl:when test="inv:Invoice">
                 <xsl:apply-templates select="inv:Invoice"/>
+            </xsl:when>
+                <xsl:when test="cre:CreditNote">
+                <xsl:apply-templates select="cre:CreditNote"/>
             </xsl:when>
             <xsl:when test="cat:Catalogue">
                 <xsl:apply-templates select="cat:Catalogue"/>
@@ -27,6 +33,9 @@
             </xsl:when>
             <xsl:when test="ordr:OrderResponse">
                 <xsl:apply-templates select="ordr:OrderResponse"/>
+            </xsl:when>
+            <xsl:when test="desp:DespatchAdvice">
+                <xsl:apply-templates select="desp:DespatchAdvice"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:text>Unrecognized document type</xsl:text>

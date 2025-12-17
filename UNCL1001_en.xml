@@ -84,6 +84,16 @@
 				<SimpleValue>Payment request for completed units</SimpleValue>
 			</Value>
 		</Row>
+		<!-- Germany only -->  
+	<Row>
+			
+			<Value ColumnRef="code">
+				<SimpleValue>326</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Partial invoice</SimpleValue>
+			</Value>
+		</Row>
 		<Row>
 			
 			<Value ColumnRef="code">
@@ -120,6 +130,16 @@
 				<SimpleValue>Debit note</SimpleValue>
 			</Value>
 		</Row>
+		<!-- Germany only -->
+	<Row>
+			
+			<Value ColumnRef="code">
+				<SimpleValue>384</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Corrected invoice</SimpleValue>
+			</Value>
+		</Row>
 		<Row>
 			
 			<Value ColumnRef="code">
@@ -136,6 +156,16 @@
 			</Value>
 			<Value ColumnRef="name">
 				<SimpleValue>Tax invoice</SimpleValue>
+			</Value>
+		</Row>
+		<!-- Germany only -->
+	<Row>
+			
+			<Value ColumnRef="code">
+				<SimpleValue>389</SimpleValue>
+			</Value>
+			<Value ColumnRef="name">
+				<SimpleValue>Self-billed invoice</SimpleValue>
 			</Value>
 		</Row>
 		<Row>

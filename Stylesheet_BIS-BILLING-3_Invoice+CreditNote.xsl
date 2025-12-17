@@ -352,7 +352,12 @@ padding-top:1vw;
 									<xsl:when test="cac:LegalMonetaryTotal/cbc:PayableAmount &lt; '0'">
 										<p align="left" style="color:red">
 											<b>
+											<xsl:if test="local-name(.)  = 'Invoice'">
 												<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+											</xsl:if>
+											<xsl:if test="local-name(.)  = 'CreditNote'">
+											<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115-1'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+											</xsl:if>
 											</b>
 											<br/>
 											<!-- Inserting Total Payable amount  -->
@@ -364,7 +369,12 @@ padding-top:1vw;
 									<xsl:otherwise>
 										<p align="left">
 											<b>
+<xsl:if test="local-name(.)  = 'Invoice'">
 												<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+											</xsl:if>
+											<xsl:if test="local-name(.)  = 'CreditNote'">
+											<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115-1'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+											</xsl:if>
 											</b>
 											<br/>
 											<!-- Inserting Total Payable amount  -->
@@ -638,7 +648,7 @@ padding-top:1vw;
 										</th>
 										<th valign="top" align="right" width="20%">
 											<b>
-												<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-99'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+												<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-92'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
 											</b>
 										</th>
 									</tr>
@@ -703,7 +713,7 @@ padding-top:1vw;
 										</th>
 										<th valign="top" align="right" width="20%">
 											<b>
-												<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-92'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+												<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-99'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
 											</b>
 										</th>
 									</tr>
@@ -915,7 +925,12 @@ padding-top:1vw;
 							<xsl:when test="cac:LegalMonetaryTotal/cbc:PayableAmount &lt; '0'">
 								<div class="col-6">
 									<h2 align="left" style="color:red">
-										<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115'"/><xsl:with-param name="Colon-Suffix" select="'true'"/></xsl:call-template>
+										<xsl:if test="local-name(.)  = 'Invoice'">
+												<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+											</xsl:if>
+											<xsl:if test="local-name(.)  = 'CreditNote'">
+											<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115-1'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+											</xsl:if>
 									</h2>
 								</div>
 								<div class="col-6">
@@ -927,7 +942,12 @@ padding-top:1vw;
 							<xsl:otherwise>
 								<div class="col-6">
 									<h2 align="left">
-										<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115'"/><xsl:with-param name="Colon-Suffix" select="'true'"/></xsl:call-template>
+										<xsl:if test="local-name(.)  = 'Invoice'">
+												<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+											</xsl:if>
+											<xsl:if test="local-name(.)  = 'CreditNote'">
+											<xsl:call-template name="LabelName"><xsl:with-param name="BT-ID" select="'BT-115-1'"/><xsl:with-param name="Colon-Suffix" select="'false'"/></xsl:call-template>
+											</xsl:if>
 									</h2>
 								</div>
 								<div class="col-6">

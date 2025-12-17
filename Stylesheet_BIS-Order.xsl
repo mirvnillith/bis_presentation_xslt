@@ -3,7 +3,7 @@
 ******************************************************************************************************************
 
 		title= Peppol BIS Ordering, Order Transaction - Reference stylesheet
-		Version of this reference stylesheet: 1.1 
+		Version of this reference stylesheet: 1.1
 		publisher= SFTI
 		conformsTo= UBL-Order-2.1.xsd 
 

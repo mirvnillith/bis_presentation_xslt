@@ -1727,6 +1727,21 @@ If remittance information is to be mapped to the End To End Identification field
 		<TermName>Item lot identifier</TermName>
 		<DisplayName>Lot ID</DisplayName>
 	</BusinessTerm>
+	<BusinessTerm id="tir01-RequestedDespatchPeriod">
+		<TermName>Requested despatch period</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir01-tir01-p053">
+		<TermName>Requested despatch date</TermName>	
+	</BusinessTerm>
+	<BusinessTerm id="tir01-p054">
+		<TermName>Requested despatch time</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir01-OrderlineAddress">
+		<TermName>Order Line Delivery Location</TermName>
+	</BusinessTerm>
+	
+	
+	
 	<BusinessTerm id="tir76-204">
 		<TermName>Response clarification</TermName>
 		<DisplayName>Response</DisplayName>
@@ -2287,4 +2302,743 @@ If remittance information is to be mapped to the End To End Identification field
 	<BusinessTerm id="tir19-additionalitempropertyid">
 		<TermName>Additional Item Property ID</TermName>
 	</BusinessTerm>
+		<BusinessTerm id="	tir19-certificatetypecode">
+		<TermName>Certificate Type Code</TermName>
+	</BusinessTerm>
+
+	
+	<!--DespatchAdvice-->
+	<BusinessTerm id="tir16-002">
+		<TermName>Specification identification</TermName>
+		<Description>Identifies the specification of content and rules that apply to the
+				transaction.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-001">
+		<TermName>Business process type identifier</TermName>
+		<Description>Identifies the BII profile or business process context in which the
+				transaction appears.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-003">
+		<TermName>Document identifier</TermName>
+		<Description>An transaction instance must contain an identifier. The identifier enables
+				positive referencing the document instance for various purposes including
+				referencing between transactions that are part of the same process.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-004">
+		<TermName>Dispatch advice issue date</TermName>
+		<Description>The date when the despatch advice is issued. Format =
+				"YYYY-MM-DD"</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-005">
+		<TermName>Dispatch advice issue time</TermName>
+		<Description>The time when the despatch advice is issued. Format =
+				"hh:mm:ss"</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-088">
+		<TermName>Dispatch note</TermName>
+		<Description>A textual note for the dispatch as whole.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-006">
+		<TermName>Order reference</TermName>
+		<Description>Used to provide a reference to the order on which the despatch is
+					based.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p049">
+		<TermName>Document identifier</TermName>
+		<Description>An identifier for the referenced document.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p050">
+		<TermName>Document description</TermName>
+		<Description>Textual description of the document.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-038">
+		<TermName>Shipment identifier</TermName>
+		<Description>Identifies a shipment.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-039">
+		<TermName>Shipment description</TermName>
+		<Description>Free-form text applying to a shipment. This element may contain notes
+					or any other similar information that is not contained explicitly in another
+					structure.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-074">
+		<TermName>Shipment gross weight</TermName>
+		<Description>The total weight of the shipment including packaging, as dispatched
+					from the dispatching party.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-075">
+		<TermName>Shipment gross volume</TermName>
+		<Description>The total volume of the shipment including packaging, as dispatched
+					from the dispatching party.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p002">
+		<TermName>Total number of transport handling units</TermName>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-046">
+		<TermName>Dispatch line identifier</TermName>
+		<Description>A indentifier for the individual line in the despatch
+					advice.</Description>
+					<DisplayName>Line ID</DisplayName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-047">
+		<TermName>Dispatch line note</TermName>
+		<Description>General note regarding the despach advice line. Free-form text applying
+					to the Despatch Line. This element may contain notes or any other similar
+					information that is not contained explicitly in another structure.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-048">
+		<TermName>Delivererd quantity</TermName>
+		<Description>The quantity that is despatched in the line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-049">
+		<TermName>Outstanding quantity</TermName>
+		<Description>The quantity outstanding (which will follow in a later
+					shipment).</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-050">
+		<TermName>Outstanding quantity reason</TermName>
+		<Description>The reason for the outstanding quantity.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p051">
+		<TermName>Attached document</TermName>
+		<Description>The attached document embeded as binary object, coded as Base64.
+					The binary object has two supplementary components: a Mime Code, which specifies the Mime type of the attachment and a Filename that is provided by (or on behalf of) the sender of the document</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-071">
+		<TermName>Despatch party electronic address</TermName>
+		<Description>Identifies the despatch party's electronic address</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-016">
+		<TermName>Consignee party electronic address</TermName>
+		<Description>Identifies the consignee party's electronic address</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-024">
+		<TermName>Contact person name</TermName>
+		<Description>The name of the contact person.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-027">
+		<TermName>Contact telephone number</TermName>
+		<Description>A phone number for the contact person. If the person has a direct
+						number, this is that number.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-028">
+		<TermName>Contact email address</TermName>
+		<Description>The e-mail address for the contact person. If the person has a
+						direct e-mail this is that email.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-040">
+		<TermName>Consignment identifier</TermName>
+		<Description>An association to Consignment covering the shipment. Unique number
+						assigned to goods, both for import and export.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-077">
+		<TermName>Vehicle description</TermName>
+		<Description>Description and/or identification of the vehicle that tranpsorts the despatched shipment.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p056">
+		<TermName>Mode of transport</TermName>
+		<Description>The mode of transport with which the goods were delivered.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-041">
+		<TermName>Delivery tracking identifier</TermName>
+		<Description>Used to provide a tracking id for delvivery e.g. UPS or
+						postal.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-051">
+		<TermName>Order line identifier</TermName>
+		<Description>To uniquely identify the line of the order that is being
+						despatched.</Description>
+						<DisplayName>Order Line ID</DisplayName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p047">
+		<TermName>Sales Order Line number. </TermName>
+		<Description>To uniquely identify the line of the sales order that is being
+						despatched.
+					</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p053">
+		<TermName>Document identifier</TermName>
+		<Description>An identifier for the referenced document.</Description>
+		<DisplayName>Document Reference</DisplayName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p054">
+		<TermName>Document description</TermName>
+		<Description>Textual description of the document.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p052">
+		<TermName>External document URI</TermName>
+		<Description>The Uniform Resource Identifier (URI) that identifies where the
+							external document is located.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p001">
+		<TermName>Despatching party identifier</TermName>
+		<Description>The identifier of the despatching party</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-postaladdress">
+		<TermName>Postal Address</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-contact">
+		<TermName>Contact</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p012">
+		<TermName>Address line 1</TermName>
+		<Description>The main address line in a postal address usually the street
+							name and number.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p013">
+		<TermName>Address line 2</TermName>
+		<Description>An additional address line in a postal address that can be used
+							to give further details supplementing the main line. Common use are
+							secondary house number in a complex or in a building.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p014">
+		<TermName>City</TermName>
+		<Description>The common name of the city where the postal address is. The
+							name is written in full rather than as a code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p015">
+		<TermName>Post code</TermName>
+		<Description>The identifier for an addressable group of properties according
+							to the relevant national postal service, such as a ZIP code or Post
+							Code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p016">
+		<TermName>Country subdivision</TermName>
+		<Description>For specifying a region, county, state, province etc. within a
+							country by using text.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-007">
+		<TermName>Dispatching party name</TermName>
+		<Description>The name of the dispatching party</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-008">
+		<TermName>Contact person name</TermName>
+		<Description>The name of the contact person.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-012">
+		<TermName>Contact telephone number</TermName>
+		<Description>A phone number for the contact person. If the person has a
+							direct number, this is that number.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-013">
+		<TermName>Contact email address</TermName>
+		<Description>The e-mail address for the contact person. If the person has a
+							direct e-mail this is that email.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-015">
+		<TermName>Consignee party identifier</TermName>
+		<Description>The receiving party identifier.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-018">
+		<TermName>Address line 1</TermName>
+		<Description>The main address line in a postal address usually the street
+							name and number.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-019">
+		<TermName>Address line 2</TermName>
+		<Description>An additional address line in a postal address that can be used
+							to give further details supplementing the main line. Common use are
+							secondary house number in a complex or in a building.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-020">
+		<TermName>City</TermName>
+		<Description>The common name of the city where the postal address is. The
+							name is written in full rather than as a code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-021">
+		<TermName>Post code</TermName>
+		<Description>The identifier for an addressable group of properties according
+							to the relevant national postal service, such as a ZIP code or Post
+							Code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-022">
+		<TermName>Country subdivision</TermName>
+		<Description>For specifying a region, county, state, province etc. within a
+							country by using text.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-014">
+		<TermName>Consignee party name</TermName>
+		<Description>The name of the receiving party.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-030">
+		<TermName>Buying party identifier</TermName>
+		<Description>The buying party identifier</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-029">
+		<TermName>Buying party name</TermName>
+		<Description>The name of the buying party</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p025">
+		<TermName>Address line 1</TermName>
+		<Description>The main address line in a postal address usually the street
+							name and number.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p026">
+		<TermName>Address line 2</TermName>
+		<Description>An additional address line in a postal address that can be used
+							to give further details supplementing the main line. Common use are
+							secondary house number in a complex or in a building.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p027">
+		<TermName>City</TermName>
+		<Description>The common name of the city where the postal address is. The
+							name is written in full rather than as a code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p028">
+		<TermName>Post code</TermName>
+		<Description>The identifier for an addressable group of properties according
+							to the relevant national postal service, such as a ZIP code or Post
+							Code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p029">
+		<TermName>Country subdivision</TermName>
+		<Description>For specifying a region, county, state, province etc. within a
+							country by using text.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-066">
+		<TermName>Selling party identifier</TermName>
+		<Description>An identifier for the seller party.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-065">
+		<TermName>Selling party name</TermName>
+		<Description>The seller party name.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p018">
+		<TermName>Address line 1</TermName>
+		<Description>The main address line in a postal address usually the street
+							name and number.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p019">
+		<TermName>Address line 2</TermName>
+		<Description>An additional address line in a postal address that can be used
+							to give further details supplementing the main line. Common use are
+							secondary house number in a complex or in a building.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p020">
+		<TermName>City</TermName>
+		<Description>The common name of the city where the postal address is. The
+							name is written in full rather than as a code.</Description>
+	</BusinessTerm>
+		<BusinessTerm id="tir16-052">
+		<TermName>Item name</TermName>
+		<Description>A short name for an item.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p021">
+		<TermName>Post code</TermName>
+		<Description>The identifier for an addressable group of properties according
+							to the relevant national postal service, such as a ZIP code or Post
+							Code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p022">
+		<TermName>Country subdivision</TermName>
+		<Description>For specifying a region, county, state, province etc. within a
+							country by using text.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-032">
+		<TermName>Originating party identifier</TermName>
+		<Description>The originator party identifier.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-031">
+		<TermName>Originating party name</TermName>
+		<Description>The originator party name.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p032">
+		<TermName>Address line 1</TermName>
+		<Description>The main address line in a postal address usually the street
+							name and number.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p033">
+		<TermName>Address line 2</TermName>
+		<Description>An additional address line in a postal address that can be used
+							to give further details supplementing the main line. Common use are
+							secondary house number in a complex or in a building.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p034">
+		<TermName>City</TermName>
+		<Description>The common name of the city where the postal address is. The
+							name is written in full rather than as a code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p035">
+		<TermName>Post code</TermName>
+		<Description>The identifier for an addressable group of properties according
+							to the relevant national postal service, such as a ZIP code or Post
+							Code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p036">
+		<TermName>Country subdivision</TermName>
+		<Description>For specifying a region, county, state, province etc. within a
+							country by using text.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-042">
+		<TermName>Period start date</TermName>
+		<Description>The start date of the period</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-043">
+		<TermName>Period start time</TermName>
+		<Description>The start time of the period.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-044">
+		<TermName>Period end date</TermName>
+		<Description>The end date of the period.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-045">
+		<TermName>Period end time</TermName>
+		<Description>The end time of the period.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-072">
+		<TermName>Shipment dispatch date</TermName>
+		<Description>The actual or expected date when the shipment was dispatched
+							from the dispatching party.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-073">
+		<TermName>Shipment dispatch time</TermName>
+		<Description>The actual or expected time when the shipment was dispatched
+							from the dispatching party.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p010">
+		<TermName>Order identifier</TermName>
+		<Description>Identifies the order that the reference order line belongs
+							to.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p041">
+		<TermName>Buyers item identifier</TermName>
+		<Description>An identifier, assigned by the buyer, for the item. Associates
+							the item with its identification according to the buyer's system. </Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-053">
+		<TermName>The Sellers item identifier</TermName>
+		<Description>An identifier, assigned by the seller, for the item. Associates
+							the item with its identification according to the seller's system. </Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-054">
+		<TermName>The sellers extended item identifier</TermName>
+		<Description>An extended identifier for the item that identifies the item
+							with specific properties, e.g., Item 123 = Chair / Item 123 Ext 45 =
+							brown chair.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-055">
+		<TermName>Item standard identifier</TermName>
+		<Description>An item identifier based on a registered scheme. Associates the
+							item with its identification according to a standard
+							system.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-056">
+		<TermName>Item standard extended identifier</TermName>
+		<Description>with specific properties, e.g., Item 123 = Chair / Item 123 Ext
+							45 = brown chair.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p048">
+		<TermName>Item classification code</TermName>
+		<Description>A code for classifying the item by its type or nature.
+							Classification codes are used to allow grouping of similar items for
+							a various purposes e.g. public procurement (CPV), e-Commerce
+							(UNSPSC) etc.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-057">
+		<TermName>Hazardous item UNDG code</TermName>
+		<Description>The identifier assigned to transportable hazardous goods by the
+							United Nations, expressed as a code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-058">
+		<TermName>Haszardous hazard class Identifier</TermName>
+		<Description>Identifies a hazard class applicable to dangerous goods as
+							defined by the relevant regulation authority, such as the IMDG Class
+							Number of the SOLAS Convention ofIMO and the ADR/RID Class Number for
+							the road/rail environment.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p039">
+		<TermName>Item property name</TermName>
+		<Description>The name of the property.The name must be sufficiently
+							descriptive to define the value. The definition may be supplemented with
+							the property unit of measure when relevant.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p042">
+		<TermName>Item property code</TermName>
+		<Description>Code for the item property according to a property code
+							system.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p040">
+		<TermName>Item property value</TermName>
+		<Description>The value of the item property.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p043">
+		<TermName>Item property unit of measure</TermName>
+		<Description>The unit of measure in which the property value is stated, if
+						relevant. May not be relevant when properties are descriptive.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p044">
+		<TermName>Property classification</TermName>
+		<Description>Standardized and predefined classification of items
+            properties.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p057">
+		<TermName>Product traceable identifier</TermName>
+		<Description>An identifier used for tracing this item instance, such as the EPC number used in RFID.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-079">
+		<TermName>Item manufactured date</TermName>
+		<Description>The manufacturing date of all items listed in this dispatch
+							line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-080">
+		<TermName>Item best before date</TermName>
+		<Description>The best before date of all items listed in this dispatch
+							line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-083">
+		<TermName>Item serial numbers</TermName>
+		<Description>Serial numbers for items listed in the dispatch
+							line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-MeasurementDimension">
+		<TermName>Measurement Dimension</TermName>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-061">
+		<TermName>Handling unit identifier</TermName>
+		<Description>Identifies the transport handling unit.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-085">
+		<TermName>Handling unit type</TermName>
+		<Description>The type of packaging that represent the handling unit, such as
+							box, pallet, container etx.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-062">
+		<TermName>Handling unit hazardous indicator</TermName>
+		<Description>Indicates whether the shipment contains hazardous
+							materials.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-064">
+		<TermName>Handling unit shipping marks</TermName>
+		<Description>Free-form description of the marks and numbers on a transport
+							unit or package.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p017">
+		<TermName>Address line 3</TermName>
+		<Description>An additional address line in an address that can be used
+								to give further details supplementing the main line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p008">
+		<TermName>Country code</TermName>
+		<Description>A code that identifies the country.The lists of valid
+								countries are registered with the ISO 3166-1 Maintenance agency,
+								"Codes for the representation of names of countries and their
+								subdivisions". Codes must be according to the alpha-2
+								representation.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p011">
+		<TermName>Address line 3</TermName>
+		<Description>An additional address line in an address that can be used
+								to give further details supplementing the main line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p045">
+		<TermName>Country code</TermName>
+		<Description>A code that identifies the country.The lists of valid
+								countries are registered with the ISO 3166-1 Maintenance agency,
+								"Codes for the representation of names of countries and their
+								subdivisions". Codes must be according to the alpha-2
+								representation.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p030">
+		<TermName>Address line 3</TermName>
+		<Description>An additional address line in an address that can be used
+								to give further details supplementing the main line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-023">
+		<TermName>Country code</TermName>
+		<Description>A code that identifies the country.The lists of valid
+								countries are registered with the ISO 3166-1 Maintenance agency,
+								"Codes for the representation of names of countries and their
+								subdivisions". Codes must be according to the alpha-2
+								representation.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p023">
+		<TermName>Address line 3</TermName>
+		<Description>An additional address line in an address that can be used
+								to give further details supplementing the main line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p031">
+		<TermName>Country code</TermName>
+		<Description>A code that identifies the country.The lists of valid
+								countries are registered with the ISO 3166-1 Maintenance agency,
+								"Codes for the representation of names of countries and their
+								subdivisions". Codes must be according to the alpha-2
+								representation.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p037">
+		<TermName>Address line 3</TermName>
+		<Description>An additional address line in an address that can be used
+								to give further details supplementing the main line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p024">
+		<TermName>Country code</TermName>
+		<Description>A code that identifies the country.The lists of valid
+								countries are registered with the ISO 3166-1 Maintenance agency,
+								"Codes for the representation of names of countries and their
+								subdivisions". Codes must be according to the alpha-2
+								representation.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p055">
+		<TermName>Carrier party identifier</TermName>
+		<Description>The carrier party identifier.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-076">
+		<TermName>Carrier name</TermName>
+		<Description>The name of the carrier that handles the delivery of the
+								dispatched shipment.</Description>
+	</BusinessTerm>
+
+	<BusinessTerm id="tir16-p046">
+		<TermName>Identifier</TermName>
+		<Description>An identifier for the location to which the goods and services are despatched.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p003">
+		<TermName>Address line 1</TermName>
+		<Description>The main address line in a postal address usually the street
+							name and number.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p004">
+		<TermName>Address line 2</TermName>
+		<Description>An additional address line in a postal address that can be used
+							to give further details supplementing the main line. Common use are
+							secondary house number in a complex or in a building.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p005">
+		<TermName>City</TermName>
+		<Description>The common name of the city where the postal address is. The
+							name is written in full rather than as a code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p006">
+		<TermName>Post code</TermName>
+		<Description>The identifier for an addressable group of properties according
+							to the relevant national postal service, such as a ZIP code or Post
+							Code.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p007">
+		<TermName>Country subdivision</TermName>
+		<Description>For specifying a region, county, state, province etc. within a
+							country by using text.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p059">
+		<TermName>Item instance property name</TermName>
+		<Description>The name of the item instance property.The name must be sufficiently
+							descriptive to define the value.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p060">
+		<TermName>Item instance property value</TermName>
+		<Description>The value of the item instance property.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-082">
+		<TermName>Item batch number</TermName>
+		<Description>The batch number that applies to all items in the dispatch
+								line.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-081">
+		<TermName>Item expiry date</TermName>
+		<Description>The expiry date of all items listed in this dispatch
+								line.</Description>
+	</BusinessTerm>
+	
+	<BusinessTerm id="tir16-p058 (Net volume)">
+		<TermName>Handling unit net/gross weight or handling unit net/gross volume</TermName>
+		<Description>Handling net or gross weight and net or gross volume being despatched in this transport handling unit.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-089">
+		<TermName>Package identifier</TermName>
+		<Description>An identifier for this package</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-090">
+		<TermName>Packaging type code</TermName>
+		<Description>The type of packaging used, such as
+							box, pallet, container etx.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-078">
+		<TermName>Driver information</TermName>
+		<Description>Identification about the driver of the vehicle that delivers the despatched shipment.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p009">
+		<TermName>Driver identification document type</TermName>
+		<Description>The type of document used for identifying the driver,
+									expressed in text.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-DespatchSupplierParty">
+		<TermName>Despatching party information</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-DeliveryCustomerParty">
+		<TermName>Consignee information</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-BuyerParty">
+		<TermName>Buyer</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-SellerParty">
+		<TermName>Seller</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-OriginatorCustomerParty">
+		<TermName>Originator customer party</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-Shipment">
+		<TermName>Shipment information</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-AdditionalDocumentReference">
+		<TermName>Additional documents</TermName>
+		
+	</BusinessTerm>
+	<BusinessTerm id="tir16-Consignment">
+		<TermName>Consignment information</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-Carrier">
+		<TermName>Carrier Party</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-OrderlineReference">
+		<TermName>Order Line Reference</TermName>
+	</BusinessTerm>
+	
+		<BusinessTerm id="tir16-Despatch">
+		<TermName>Actual or expected despatch period</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-DespatchAddress">
+		<TermName>Despatch address</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-DespatchLines">
+		<TermName>DESPATCH LINES</TermName>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-p038">
+		<TermName>Country code</TermName>
+		<Description>A code that identifies the country.The lists of valid
+										countries are registered with the ISO 3166-1 Maintenance agency,
+										"Codes for the representation of names of countries and their
+										subdivisions". Codes must be according to the alpha-2
+										representation.</Description>
+	</BusinessTerm>
+	<BusinessTerm id="tir16-header">
+	<TermName>Despatch Advice</TermName>
+</BusinessTerm>
+	
+	
+	
+	
+	
+	
 </SemanticModel>
+
